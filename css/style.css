@@ -919,6 +919,31 @@ footer .border-top {
   transition: var(--transition);
   border: 1px solid #e1e1e1;
 }
+.item .favorite {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3098039216);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  transition: var(--transition);
+}
+.item .favorite img {
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+  filter: invert(1);
+}
+.item .favorite:hover, .item .favorite.active {
+  background-color: red;
+}
 .item .itemImg {
   position: relative;
   overflow: hidden;

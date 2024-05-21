@@ -113,19 +113,21 @@ $(document).ready(function () {
       991: {
         slidesPerView: 4,
       },
-      
     },
   });
 
   // text length
-  $(".item .itemInfo .title , .item .itemInfo .location span").each(function () {
-    var text = $(this).text();
-    if (text.length > 35) {
-      var truncatedText =
-        $.trim(text).substring(0, 35).split(" ").slice(0, -1).join(" ") + "...";
-      $(this).text(truncatedText);
+  $(".item .itemInfo .title , .item .itemInfo .location span").each(
+    function () {
+      var text = $(this).text();
+      if (text.length > 35) {
+        var truncatedText =
+          $.trim(text).substring(0, 35).split(" ").slice(0, -1).join(" ") +
+          "...";
+        $(this).text(truncatedText);
+      }
     }
-  });
+  );
   // text length
   $(".item .itemInfo .description").each(function () {
     var text = $(this).text();
