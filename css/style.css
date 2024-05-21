@@ -653,7 +653,7 @@ footer .border-top {
   position: relative;
   bottom: unset;
   left: unset;
-  padding: 20px;
+  padding: 8px;
   display: flex;
   gap: 24px;
   align-items: center;
@@ -799,13 +799,8 @@ footer .border-top {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  row-gap: 4px;
   margin-bottom: 16px;
-}
-@media screen and (max-width: 768px) {
-  .topHead {
-    flex-direction: column;
-    justify-content: center;
-  }
 }
 
 .sectionTitle {
