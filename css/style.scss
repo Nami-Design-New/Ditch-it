@@ -295,6 +295,24 @@ content {
   max-width: unset;
   margin: auto;
 }
+.swiper {
+  width: 100%;
+  .swiper-slide {
+    transition: 0.3s;
+    opacity: 0;
+    overflow: unset;
+  }
+  .swiper-slide-prev {
+    transform-origin: right center;
+  }
+  .swiper-slide-next {
+    transform-origin: left center;
+  }
+  .swiper-slide-active,
+  .swiper-slide-visible {
+    opacity: 1;
+  }
+}
 .searchForm {
   flex-shrink: 1;
   flex-grow: 0;
@@ -624,8 +642,6 @@ footer {
 }
 .swiperControl {
   position: relative;
-  bottom: unset;
-  left: unset;
   padding: 8px;
   display: flex;
   gap: 24px;
@@ -746,13 +762,17 @@ footer {
   }
   .swiperControl {
     position: absolute;
-    bottom: 0px;
+    bottom: 8px;
     right: 0;
+    width: 100%;
     .swiper-button-next,
     .swiper-button-prev {
       &::after {
         filter: brightness(0) invert(1);
       }
+    }
+    .swiper-pagination {
+      justify-content: center;
     }
   }
 }
@@ -791,7 +811,7 @@ footer {
     }
     @media screen and (max-width: 768px) {
       font-size: 24px;
-      span{
+      span {
         display: block;
       }
     }
@@ -857,24 +877,6 @@ footer {
         left: 8px;
       }
     }
-  }
-}
-.swiper {
-  width: 100%;
-  .swiper-slide {
-    transition: 0.3s;
-    opacity: 0;
-    overflow: unset;
-  }
-  .swiper-slide-prev {
-    transform-origin: right center;
-  }
-  .swiper-slide-next {
-    transform-origin: left center;
-  }
-  .swiper-slide-active,
-  .swiper-slide-visible {
-    opacity: 1;
   }
 }
 .item {
@@ -1069,7 +1071,6 @@ footer {
     --darkColor: #f0f0f0;
     --grayColor: #bbbbbb;
     --lightBorderColor: #38383a;
-   
     .topHead {
       flex: 1;
       min-width: 300px;
@@ -1082,7 +1083,7 @@ footer {
         }
       }
     }
-    .swiper{
+    .swiper {
       min-width: 300px;
       flex: 3;
     }

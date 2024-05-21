@@ -318,6 +318,25 @@ content {
   margin: auto;
 }
 
+.swiper {
+  width: 100%;
+}
+.swiper .swiper-slide {
+  transition: 0.3s;
+  opacity: 0;
+  overflow: unset;
+}
+.swiper .swiper-slide-prev {
+  transform-origin: right center;
+}
+.swiper .swiper-slide-next {
+  transform-origin: left center;
+}
+.swiper .swiper-slide-active,
+.swiper .swiper-slide-visible {
+  opacity: 1;
+}
+
 .searchForm {
   flex-shrink: 1;
   flex-grow: 0;
@@ -652,8 +671,6 @@ footer .border-top {
 
 .swiperControl {
   position: relative;
-  bottom: unset;
-  left: unset;
   padding: 8px;
   display: flex;
   gap: 24px;
@@ -786,12 +803,16 @@ footer .border-top {
 }
 .mainSlider .swiperControl {
   position: absolute;
-  bottom: 0px;
+  bottom: 8px;
   right: 0;
+  width: 100%;
 }
 .mainSlider .swiperControl .swiper-button-next::after,
 .mainSlider .swiperControl .swiper-button-prev::after {
   filter: brightness(0) invert(1);
+}
+.mainSlider .swiperControl .swiper-pagination {
+  justify-content: center;
 }
 
 .topHead {
@@ -901,25 +922,6 @@ footer .border-top {
   visibility: visible;
   top: 8px;
   left: 8px;
-}
-
-.swiper {
-  width: 100%;
-}
-.swiper .swiper-slide {
-  transition: 0.3s;
-  opacity: 0;
-  overflow: unset;
-}
-.swiper .swiper-slide-prev {
-  transform-origin: right center;
-}
-.swiper .swiper-slide-next {
-  transform-origin: left center;
-}
-.swiper .swiper-slide-active,
-.swiper .swiper-slide-visible {
-  opacity: 1;
 }
 
 .item {
