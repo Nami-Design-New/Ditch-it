@@ -6,6 +6,7 @@
   --whiteColor: #ffffff;
   --darkColor: #1f1f1f;
   --lightGrayColor: #d6d6d6;
+  --lightBorderColor: #e1e1e1;
   --grayColor: #777;
   --transition: 0.2s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
@@ -758,11 +759,11 @@ footer {
 .topHead {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
   row-gap: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 .sectionTitle {
   padding: 0 8px;
@@ -778,7 +779,7 @@ footer {
   }
   .title {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--darkColor);
     span {
       color: var(--mainColor);
@@ -801,7 +802,7 @@ footer {
     align-items: center;
     gap: 8px;
     padding: 20px;
-    border: 1px solid #e1e1e1;
+    border: 1px solid var(--lightBorderColor);
     border-radius: 16px;
     position: relative;
     background: var(--whiteColor);
@@ -852,6 +853,7 @@ footer {
   }
 }
 .swiper {
+  width: 100%;
   .swiper-slide {
     transition: 0.3s;
     opacity: 0;
@@ -877,7 +879,8 @@ footer {
   height: 100%;
   border-radius: 16px;
   transition: var(--transition);
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--lightBorderColor);
+  background-color: var(--whiteColor);
   .favorite {
     position: absolute;
     top: 16px;
@@ -903,7 +906,6 @@ footer {
       background-color: red;
     }
   }
-
   .itemImg {
     position: relative;
     overflow: hidden;
@@ -944,6 +946,7 @@ footer {
     flex: 1;
     padding: 16px;
     position: relative;
+    color: var(--darkColor);
     .title {
       font-weight: bold;
       font-size: 16px;
@@ -990,12 +993,11 @@ footer {
       justify-content: space-between;
       padding-top: 12px;
       margin-top: 8px;
-      border-top: 1px solid #e1e1e1;
+      border-top: 1px solid var(--lightBorderColor);
       .category {
         display: flex;
         align-items: center;
         gap: 4px;
-
         .img {
           width: 40px;
           height: 40px;
@@ -1019,7 +1021,6 @@ footer {
       }
     }
   }
-
   &:hover {
     .itemImg {
       img {
@@ -1036,9 +1037,47 @@ footer {
     left: 125%;
   }
 }
+.sliders {
+  .slideItems {
+    &:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+  }
+}
+.slideItems,
 .popular {
-  padding: 40px 0;
+  padding: 60px 0;
   .swiper-wrapper {
     padding-bottom: 20px;
+  }
+}
+.popular {
+  background-color: #212121;
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    --whiteColor: #1f1f1f;
+    --darkColor: #f0f0f0;
+    --grayColor: #bbbbbb;
+    --lightBorderColor: #38383a;
+   
+    .topHead {
+      flex: 1;
+      min-width: 300px;
+      .sectionTitle {
+        .title {
+          font-size: 60px;
+          @media screen and (max-width: 768px) {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+    .swiper{
+      min-width: 300px;
+      flex: 3;
+    }
   }
 }

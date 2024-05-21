@@ -6,6 +6,7 @@
   --whiteColor: #ffffff;
   --darkColor: #1f1f1f;
   --lightGrayColor: #d6d6d6;
+  --lightBorderColor: #e1e1e1;
   --grayColor: #777;
   --transition: 0.2s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
@@ -796,11 +797,11 @@ footer .border-top {
 .topHead {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
   row-gap: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .sectionTitle {
@@ -818,7 +819,7 @@ footer .border-top {
 }
 .sectionTitle .title {
   font-size: 40px;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--darkColor);
 }
 .sectionTitle .title span {
@@ -844,7 +845,7 @@ footer .border-top {
   align-items: center;
   gap: 8px;
   padding: 20px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--lightBorderColor);
   border-radius: 16px;
   position: relative;
   background: var(--whiteColor);
@@ -893,6 +894,9 @@ footer .border-top {
   left: 8px;
 }
 
+.swiper {
+  width: 100%;
+}
 .swiper .swiper-slide {
   transition: 0.3s;
   opacity: 0;
@@ -917,7 +921,8 @@ footer .border-top {
   height: 100%;
   border-radius: 16px;
   transition: var(--transition);
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--lightBorderColor);
+  background-color: var(--whiteColor);
 }
 .item .favorite {
   position: absolute;
@@ -982,6 +987,7 @@ footer .border-top {
   flex: 1;
   padding: 16px;
   position: relative;
+  color: var(--darkColor);
 }
 .item .itemInfo .title {
   font-weight: bold;
@@ -1029,7 +1035,7 @@ footer .border-top {
   justify-content: space-between;
   padding-top: 12px;
   margin-top: 8px;
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid var(--lightBorderColor);
 }
 .item .itemInfo .itemBottom .category {
   display: flex;
@@ -1067,9 +1073,45 @@ footer .border-top {
     left: 125%;
   }
 }
-.popular {
-  padding: 40px 0;
+.sliders .slideItems:nth-child(even) {
+  background-color: #f5f5f5;
 }
+
+.slideItems,
+.popular {
+  padding: 60px 0;
+}
+.slideItems .swiper-wrapper,
 .popular .swiper-wrapper {
   padding-bottom: 20px;
+}
+
+.popular {
+  background-color: #212121;
+}
+.popular .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  --whiteColor: #1f1f1f;
+  --darkColor: #f0f0f0;
+  --grayColor: #bbbbbb;
+  --lightBorderColor: #38383a;
+}
+.popular .container .topHead {
+  flex: 1;
+  min-width: 300px;
+}
+.popular .container .topHead .sectionTitle .title {
+  font-size: 60px;
+}
+@media screen and (max-width: 768px) {
+  .popular .container .topHead .sectionTitle .title {
+    font-size: 40px;
+  }
+}
+.popular .container .swiper {
+  min-width: 300px;
+  flex: 3;
 }/*# sourceMappingURL=style.css.map */

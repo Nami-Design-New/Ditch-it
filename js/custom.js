@@ -80,7 +80,7 @@ $(document).ready(function () {
     });
   }
 
-  //populr Slider
+  //popular Slider
   var popular = new Swiper(".popular .swiper", {
     pagination: {
       el: ".popular .swiper-pagination",
@@ -105,15 +105,63 @@ $(document).ready(function () {
         slidesPerView: 1,
       },
       576: {
+        slidesPerView: 1,
+      },
+      992: {
         slidesPerView: 2,
       },
-      768: {
+      1200: {
         slidesPerView: 3,
       },
-      991: {
-        slidesPerView: 4,
-      },
     },
+  });
+  // Function to generate a random delay within a range
+  function getRandomDelay(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // Initialize each slideItems separately
+  var slideItems = document.querySelectorAll(".slideItems");
+
+  slideItems.forEach(function (slider) {
+    var swiper = slider.querySelector(".swiper");
+    var pagination = slider.querySelector(".swiper-pagination");
+    var nextBtn = slider.querySelector(".swiper-button-next");
+    var prevBtn = slider.querySelector(".swiper-button-prev");
+    var delay = getRandomDelay(2000, 5000); // Random delay between 2000ms and 5000ms
+
+    new Swiper(swiper, {
+      pagination: {
+        el: pagination,
+        clickable: true,
+      },
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn,
+      },
+      slidesPerView: "auto",
+      watchSlidesProgress: true,
+      spaceBetween: 10,
+      speed: 700,
+      autoplay: {
+        delay: delay,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        991: {
+          slidesPerView: 4,
+        },
+      },
+    });
   });
 
   // text length
