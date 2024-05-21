@@ -808,6 +808,9 @@ footer .border-top {
   }
 }
 
+.sectionTitle {
+  padding: 0 8px;
+}
 .sectionTitle .subtitle {
   display: block;
   font-size: 14px;
