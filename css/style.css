@@ -7,7 +7,7 @@
   --darkColor: #1f1f1f;
   --lightGrayColor: #d6d6d6;
   --grayColor: #777;
-  --transition: 0.3s ease-in-out;
+  --transition: 0.2s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
   --BigShadow: 0 16px 32px 0 #071c1f1a;
 }
@@ -74,7 +74,6 @@ h5,
 h6,
 p {
   margin: 0;
-  line-height: 1.2;
   color: var(--darkColor);
 }
 
@@ -193,6 +192,66 @@ content {
   min-height: calc(100dvh - 330px);
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 13px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 14px;
+  }
+}
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.7;
 }
 
 .preloader {
@@ -734,9 +793,21 @@ footer .border-top {
   filter: brightness(0) invert(1);
 }
 
-.sectionTitle {
-  margin-bottom: 24px;
+.topHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
 }
+@media screen and (max-width: 768px) {
+  .topHead {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .sectionTitle .subtitle {
   display: block;
   font-size: 14px;
@@ -748,7 +819,7 @@ footer .border-top {
   color: var(--mainColor);
 }
 .sectionTitle .title {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   color: var(--darkColor);
 }
@@ -756,9 +827,19 @@ footer .border-top {
   color: var(--mainColor);
   font-size: unset;
 }
+@media screen and (max-width: 768px) {
+  .sectionTitle .title {
+    font-size: 30px;
+  }
+}
 
 .categories {
   padding: 40px 0;
+}
+@media screen and (min-width: 768px) {
+  .categories .row {
+    margin: 0 -16px;
+  }
 }
 .categories .category {
   display: flex;
@@ -769,6 +850,7 @@ footer .border-top {
   border-radius: 16px;
   position: relative;
   background: var(--whiteColor);
+  height: 100%;
 }
 .categories .category .text {
   flex: 1;
@@ -813,62 +895,158 @@ footer .border-top {
   left: 8px;
 }
 
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 25px;
-  }
-  h2 {
-    font-size: 21px;
-  }
-  h3 {
-    font-size: 19px;
-  }
-  h4 {
-    font-size: 17px;
-  }
-  h5 {
-    font-size: 15px;
-  }
-  h6 {
-    font-size: 13px;
-  }
-  body,
-  span,
-  p,
-  button,
-  a,
-  P {
-    font-size: 13px;
+.swiper .swiper-slide {
+  transition: 0.3s;
+  opacity: 0;
+  overflow: unset;
+}
+.swiper .swiper-slide-prev {
+  transform-origin: right center;
+}
+.swiper .swiper-slide-next {
+  transform-origin: left center;
+}
+.swiper .swiper-slide-active,
+.swiper .swiper-slide-visible {
+  opacity: 1;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  border-radius: 16px;
+  transition: var(--transition);
+  border: 1px solid #e1e1e1;
+}
+.item .itemImg {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  aspect-ratio: 3/2;
+  width: 100%;
+  transition: var(--transition);
+  max-height: 300px;
+}
+.item .itemImg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: 0.4s ease-in-out;
+}
+.item .itemImg::after {
+  position: absolute;
+  top: 0;
+  left: -80%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+.item .itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  padding: 16px;
+  position: relative;
+}
+.item .itemInfo .title {
+  font-weight: bold;
+  font-size: 16px;
+}
+.item .itemInfo .description {
+  color: var(--grayColor);
+  flex: 1;
+  font-size: 13px;
+}
+.item .itemInfo .advertiser {
+  position: absolute;
+  top: -28px;
+  right: 16px;
+  z-index: 3;
+}
+.item .itemInfo .advertiser img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid var(--whiteColor);
+  transition: var(--transition);
+}
+.item .itemInfo .advertiser:hover img {
+  border: 2px solid var(--mainColor);
+}
+.item .itemInfo .location,
+.item .itemInfo .time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--grayColor);
+}
+.item .itemInfo .location img,
+.item .itemInfo .time img {
+  width: 16px;
+  height: 16px;
+}
+.item .itemInfo .itemBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  margin-top: 8px;
+  border-top: 1px solid #e1e1e1;
+}
+.item .itemInfo .itemBottom .category {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.item .itemInfo .itemBottom .category .img {
+  width: 40px;
+  height: 40px;
+  background-color: var(--mainColor10);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item .itemInfo .itemBottom .category .img img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.item .itemInfo .itemBottom .price span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.item:hover .itemImg img {
+  transform: scale(1.1);
+}
+.item:hover .itemImg::after {
+  animation: shine 1s;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
   }
 }
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  h4 {
-    font-size: 18px;
-  }
-  h5 {
-    font-size: 16px;
-  }
-  h6 {
-    font-size: 14px;
-  }
-  body,
-  span,
-  p,
-  button,
-  a,
-  P {
-    font-size: 14px;
-  }
+.popular {
+  padding: 40px 0;
 }
-.modal-backdrop {
-  --bs-backdrop-opacity: 0.7;
+.popular .swiper-wrapper {
+  padding-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
