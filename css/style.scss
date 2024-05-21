@@ -716,7 +716,7 @@ footer {
     justify-content: end;
     align-items: center;
     .swiper-pagination-bullet {
-      background-color: var(--mainColor);
+      background-color: var(--darkColor);
       transition: var(--transition);
       border-radius: 16px;
       &.swiper-pagination-bullet-active {

@@ -755,7 +755,7 @@ footer .border-top {
   align-items: center;
 }
 .swiperControl .swiper-pagination .swiper-pagination-bullet {
-  background-color: var(--mainColor);
+  background-color: var(--darkColor);
   transition: var(--transition);
   border-radius: 16px;
 }
