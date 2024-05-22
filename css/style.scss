@@ -1346,6 +1346,7 @@ footer {
     padding: 24px;
     border: 1px solid var(--lightBorderColor);
     border-radius: 16px;
+    background-color: var(--whiteColor);
     @media screen and (max-width: 768px) {
       padding: 16px;
       .title {
@@ -1409,7 +1410,7 @@ footer {
     padding: 24px;
     text-align: center;
     background-color: var(--whiteColor);
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     background-image: url(../img/imgStatus.svg);
     background-position: top right;
     background-repeat: no-repeat;
@@ -1469,13 +1470,6 @@ footer {
           background-color: #2562d3;
         }
       }
-    }
-  }
-  .safety{
-    width: 90%;
-    margin: auto;
-    .title{
-      color: var(--mainColor);
     }
   }
 }
