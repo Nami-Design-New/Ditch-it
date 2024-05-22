@@ -1106,6 +1106,7 @@ footer {
   }
 }
 .itemDetails {
+  padding: 40px 0;
   .itemDetailsSlider {
     display: flex;
     flex-direction: column;
@@ -1269,6 +1270,7 @@ footer {
     padding: 8px 12px;
     border-radius: 100px;
     height: 42px;
+    font-weight: bold;
     img {
       width: 24px;
       height: 24px;
@@ -1292,7 +1294,10 @@ footer {
     padding-top: 12px;
     margin-top: 8px;
     border-top: 1px solid var(--lightBorderColor);
+    gap: 8px;
+    flex-wrap: wrap;
     .location,
+    .views,
     .time {
       display: flex;
       align-items: center;
@@ -1303,6 +1308,9 @@ footer {
         width: 16px;
         height: 16px;
       }
+    }
+    .location {
+      flex: 1;
     }
   }
   .itemInfo {
@@ -1316,13 +1324,14 @@ footer {
     }
     .description {
       color: var(--grayColor);
+      padding: 8px 0;
     }
   }
-  .instructions{
+  .instructions {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    span{
+    span {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1331,6 +1340,142 @@ footer {
       color: var(--whiteColor);
       padding: 8px 16px;
       border-radius: 100px;
+    }
+  }
+  .itemDetailsBox {
+    padding: 24px;
+    border: 1px solid var(--lightBorderColor);
+    border-radius: 16px;
+    @media screen and (max-width: 768px) {
+      padding: 16px;
+      .title {
+        padding: 8px;
+      }
+      ul {
+        padding: 0 12px;
+      }
+    }
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--lightBorderColor);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 16px;
+        border-radius: 16px;
+        gap: 8px;
+        span {
+          flex: 1;
+        }
+        p {
+          flex: 3;
+          font-weight: bold;
+        }
+        &:nth-child(2n) {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border: 1px solid var(--darkColor);
+        padding: 8px 16px;
+        border-radius: 100px;
+      }
+    }
+  }
+
+  .advertiserDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: var(--BigShadow);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    background-color: var(--whiteColor);
+    margin-bottom: 24px;
+    background-image: url(../img/imgStatus.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    // position: sticky;
+    // top: 120px ;
+    // z-index: 2;
+
+    .advertiser {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 100px;
+        transition: var(--transition);
+      }
+      h3 {
+        font-weight: bold;
+        transition: var(--transition);
+        text-transform: capitalize;
+      }
+      &:hover {
+        .name {
+          color: var(--mainColor);
+        }
+      }
+    }
+    .date {
+      color: var(--grayColor);
+      font-size: 13px;
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      a {
+        flex: 1;
+        padding: 12px 16px;
+        border-radius: 16px;
+        gap: 8px;
+        background-color: var(--mainColor);
+        color: var(--whiteColor);
+        text-transform: capitalize;
+        font-size: 16px;
+        img {
+          width: 20px;
+          height: 20px;
+          object-fit: contain;
+          filter: brightness(0) invert(1);
+        }
+        &.call {
+          background-color: #2562d3;
+        }
+      }
+    }
+  }
+  .safety{
+    width: 90%;
+    margin: auto;
+    .title{
+      color: var(--mainColor);
     }
   }
 }
