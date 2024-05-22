@@ -79,7 +79,6 @@ $(document).ready(function () {
       video.pause();
     });
   }
-
   //popular Slider
   var popular = new Swiper(".popular .swiper", {
     pagination: {
@@ -119,17 +118,14 @@ $(document).ready(function () {
   function getRandomDelay(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-
   // Initialize each slideItems separately
   var slideItems = document.querySelectorAll(".slideItems");
-
   slideItems.forEach(function (slider) {
     var swiper = slider.querySelector(".swiper");
     var pagination = slider.querySelector(".swiper-pagination");
     var nextBtn = slider.querySelector(".swiper-button-next");
     var prevBtn = slider.querySelector(".swiper-button-prev");
     var delay = getRandomDelay(2000, 5000); // Random delay between 2000ms and 5000ms
-
     new Swiper(swiper, {
       pagination: {
         el: pagination,
@@ -163,7 +159,41 @@ $(document).ready(function () {
       },
     });
   });
-
+  // item Details Slider
+  var itemDetailsSliderThumbs = new Swiper(".itemDetailsSlider .thumbs", {
+    // loop: true,
+    spaceBetween: 8,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 3,
+      },
+      576: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+        direction: "vertical",
+      },
+    },
+  });
+  var itemDetailsSliderSlider = new Swiper(".itemDetailsSlider .slider", {
+    // loop: true,
+    spaceBetween: 8,
+    pagination: {
+      el: ".itemDetailsSlider .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".itemDetailsSlider .swiper-button-next",
+      prevEl: ".itemDetailsSlider .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: itemDetailsSliderThumbs,
+    },
+  });
   // text length
   $(".item .itemInfo .title , .item .itemInfo .location span").each(
     function () {
@@ -209,7 +239,7 @@ $(document).ready(function () {
       sectionDivs.each(function (index) {
         // Check if data-aos-delay is not already set
         if (!$(this).attr("data-aos-delay")) {
-          $(this).attr("data-aos-delay", (index + 1) * 100);
+          $(this).attr("data-aos-delay", (index + 1) * 50);
         }
       });
     });
@@ -218,7 +248,7 @@ $(document).ready(function () {
   AOS.init({
     offset: 20,
     delay: 50,
-    duration: 750,
+    duration: 500,
     once: true,
   });
   // lozad
