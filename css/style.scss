@@ -1542,6 +1542,7 @@ footer {
 .explore {
   padding: 40px 0;
   .sortBy {
+    padding: 16px;
     cursor: pointer;
     display: none;
     align-items: center;
@@ -1583,7 +1584,7 @@ footer {
   }
   .filter {
     @media screen and (max-width: 768px) {
-      .asideFilter{
+      .asideFilter {
         flex: 1;
         overflow-y: auto;
       }
@@ -1666,4 +1667,14 @@ footer {
     height: 12px;
     background-position: center;
   }
+}
+.pagination {
+  --bs-link-color: var(--mainColor);
+  --bs-link-hover-color: var(--mainColor);
+  --bs-link-hover-color: var(--mainColor);
+  --bs-pagination-active-bg: var(--mainColor);
+  --bs-pagination-active-border-color: var(--mainColor);
+  --bs-pagination-focus-box-shadow: none;
+  justify-content: center;
+  margin: 20px 0;
 }

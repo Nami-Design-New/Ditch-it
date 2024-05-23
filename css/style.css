@@ -1573,6 +1573,7 @@ footer .border-top {
   padding: 40px 0;
 }
 .explore .sortBy {
+  padding: 16px;
   cursor: pointer;
   display: none;
   align-items: center;
@@ -1701,4 +1702,15 @@ footer .border-top {
   width: 12px;
   height: 12px;
   background-position: center;
+}
+
+.pagination {
+  --bs-link-color: var(--mainColor);
+  --bs-link-hover-color: var(--mainColor);
+  --bs-link-hover-color: var(--mainColor);
+  --bs-pagination-active-bg: var(--mainColor);
+  --bs-pagination-active-border-color: var(--mainColor);
+  --bs-pagination-focus-box-shadow: none;
+  justify-content: center;
+  margin: 20px 0;
 }/*# sourceMappingURL=style.css.map */
