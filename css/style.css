@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --mainColor: #00a650;
   --mainColor20: #00a65033;
@@ -1145,7 +1146,7 @@ footer .border-top {
 }
 
 .itemDetails {
-  padding: 40px 0;
+  padding-bottom: 40px;
 }
 .itemDetails .itemDetailsSlider {
   display: flex;
@@ -1511,4 +1512,45 @@ footer .border-top {
 }
 .itemDetails .advertiserDetails .contact a.call {
   background-color: #2562d3;
+}
+
+.banner {
+  background-color: #f5f5f5;
+  padding: 20px 0;
+  position: relative;
+  display: flex;
+  isolation: isolate;
+}
+.banner .links {
+  margin-bottom: 4px;
+}
+.banner .links a {
+  padding: 4px;
+  position: relative;
+  color: var(--mainColor);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: capitalize;
+}
+.banner .links a:last-child::after {
+  display: none;
+}
+.banner .links a::after {
+  content: " ↣ ";
+}
+.banner .links a.active {
+  cursor: default;
+  color: #777;
+}
+.banner h2 {
+  font-weight: bold;
+  padding: 4px;
+  color: var(--mainColor);
+  text-transform: capitalize;
+}
+@media (max-width: 768px) {
+  .banner h2 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
