@@ -1632,6 +1632,10 @@ footer .border-top {
     width: 100dvw;
     transition: var(--transition);
   }
+  .explore .filter .asideFilter {
+    flex: 1;
+    overflow-y: auto;
+  }
 }
 .explore .filter.active {
   left: 0;
@@ -1668,9 +1672,19 @@ footer .border-top {
 .explore .asideFilter .option * {
   cursor: pointer;
 }
+.explore .asideFilter .priceRange {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.explore .asideFilter .form-control {
+  min-height: 40px;
+}
 
 .accordion-button {
   transition: var(--transition);
+  font-size: 14px;
+  font-weight: bold;
 }
 .accordion-button:not(.collapsed) {
   background-color: var(--mainColor);

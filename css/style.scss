@@ -1583,6 +1583,10 @@ footer {
   }
   .filter {
     @media screen and (max-width: 768px) {
+      .asideFilter{
+        flex: 1;
+        overflow-y: auto;
+      }
       padding: 32px 16px !important;
       position: fixed;
       top: 0px;
@@ -1632,10 +1636,20 @@ footer {
         cursor: pointer;
       }
     }
+    .priceRange {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .form-control {
+      min-height: 40px;
+    }
   }
 }
 .accordion-button {
   transition: var(--transition);
+  font-size: 14px;
+  font-weight: bold;
   &:not(.collapsed) {
     background-color: var(--mainColor);
     box-shadow: none;
