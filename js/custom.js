@@ -20,6 +20,14 @@ $(document).ready(function () {
       $("header").removeClass("headerAnimate");
     }
   });
+  // Get the current URL path
+  var currentPath = window.location.pathname.split("/").pop();
+  $("header .navLink").each(function () {
+    var linkPath = $(this).attr("href").split("/").pop();
+    if (linkPath === currentPath) {
+      $(this).addClass("active");
+    }
+  });
   //mainSlider
   function calculateAutoplayDelay(video, minimumDelay) {
     if (video) {
@@ -298,17 +306,22 @@ function dehighlight(el) {
   }
 }
 // profile Image Input
-document
-  .getElementById("profileImageInput")
-  .addEventListener("change", function (event) {
+$(document).ready(function () {
+  $("#profileImageInput").on("change", function (event) {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = function (e) {
-        document
-          .getElementById("profileImagePreview")
-          .setAttribute("src", e.target.result);
+        $("#profileImagePreview").attr("src", e.target.result);
       };
       reader.readAsDataURL(file);
     }
   });
+});
+// filter
+$("#openfilter").on("click", function () {
+  $("#filter").addClass("active");
+});
+$("#closefilter").on("click", function () {
+  $("#filter").removeClass("active");
+});
