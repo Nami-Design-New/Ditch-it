@@ -876,6 +876,20 @@ footer .border-top {
   }
 }
 
+.viewAll {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mainColor);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.viewAll img {
+  width: 16px;
+  height: 16px;
+  transform: scaleX(-1);
+}
+
 .categories {
   padding: 40px 0;
 }
