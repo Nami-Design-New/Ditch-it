@@ -827,14 +827,14 @@ footer {
     }
   }
 }
-.viewAll{
+.viewAll {
   display: flex;
   align-items: center;
   gap: 8px;
   color: var(--mainColor);
   font-weight: bold;
   text-transform: capitalize;
-  img{
+  img {
     width: 16px;
     height: 16px;
     transform: scaleX(-1);
@@ -1537,5 +1537,119 @@ footer {
     @media (max-width: 768px) {
       font-size: 20px;
     }
+  }
+}
+.explore {
+  padding: 40px 0;
+  .sortBy {
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+  .closeFilter {
+    display: none;
+    align-self: flex-end;
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid var(--darkColor);
+    transition: var(--transition);
+    img {
+      width: 12px;
+      height: 12px;
+      object-fit: contain;
+      transition: var(--transition);
+    }
+    &:hover {
+      background: var(--darkColor);
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+  .filter {
+    @media screen and (max-width: 768px) {
+      padding: 32px 16px !important;
+      position: fixed;
+      top: 0px;
+      left: -100%;
+      z-index: 9999;
+      background: var(--whiteColor);
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      height: calc(100dvh - 0px);
+      width: 100dvw;
+      transition: var(--transition);
+    }
+    &.active {
+      left: 0;
+    }
+  }
+  .asideFilter {
+    .accordion-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      padding: 4px;
+      img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+      label {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      input {
+        height: 16px;
+        width: 16px;
+        transition: var(--transition);
+      }
+      * {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.accordion-button {
+  transition: var(--transition);
+  &:not(.collapsed) {
+    background-color: var(--mainColor);
+    box-shadow: none;
+    color: var(--whiteColor);
+    &::after {
+      filter: brightness(0) invert(1);
+    }
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &::after {
+    width: 12px;
+    height: 12px;
+    background-position: center;
   }
 }
