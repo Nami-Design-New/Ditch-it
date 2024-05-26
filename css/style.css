@@ -1729,4 +1729,226 @@ footer .border-top {
   --bs-pagination-focus-box-shadow: none;
   justify-content: center;
   margin: 20px 0;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_section {
+  padding: 40px;
+}
+.contact_section form {
+  background: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1019607843);
+  padding: 42px 12px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+@media (max-width: 576px) {
+  .contact_section form {
+    padding: 32px 0;
+  }
+}
+.contact_section form .form-group {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .contact_section form .form-group {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+.contact_section form .form-group .inputfield {
+  width: 100%;
+  padding: 0 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.contact_section form .form-group .inputfield label {
+  position: absolute;
+  font-size: 14px;
+  color: var(--grayColor);
+  left: 16px;
+  transform: translateY(-50%);
+  top: 50%;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: auto;
+}
+.contact_section form .form-group .inputfield label i {
+  margin-right: 4px;
+}
+.contact_section form .form-group .inputfield label.message-label {
+  top: 20%;
+}
+.contact_section form .form-group .inputfield label.h {
+  top: -4px;
+  color: var(--mainColor);
+}
+.contact_section form .form-group .inputfield input,
+.contact_section form .form-group .inputfield textarea {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  background: none;
+}
+.contact_section form .form-group .inputfield input:focus + span::after,
+.contact_section form .form-group .inputfield textarea:focus + span::after {
+  width: calc(100% - 32px);
+}
+.contact_section form .form-group .inputfield textarea {
+  padding: 16px 0;
+  height: 130px;
+}
+.contact_section form .form-group .inputfield .highlight {
+  width: 100%;
+  height: 2px;
+  background: #eeeeee;
+}
+.contact_section form .form-group .inputfield .highlight::after {
+  content: "";
+  width: 0;
+  transition: var(--transition);
+  left: 50%;
+  height: 2px;
+  background: var(--mainColor);
+  position: absolute;
+  transform: translate(-50%);
+}
+.contact_section .contact_info {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1019607843);
+}
+.contact_section .contact_info h3 {
+  font-size: 22px;
+  color: var(--darkColor);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.contact_section .contact_info ul {
+  padding: 0;
+  margin: 0;
+}
+.contact_section .contact_info h5 {
+  font-size: 22px;
+  color: var(--mainColor);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.contact_section .contact_info p {
+  color: var(--grayColor);
+  font-size: 15px;
+}
+.contact_section .contact_info .field {
+  width: 100%;
+  display: flex;
+  margin-bottom: 32px;
+  gap: 16px;
+  align-items: center;
+}
+.contact_section .contact_info .field .icon {
+  min-width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--mainColor);
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact_section .contact_info .field .icon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0;
+  transition: var(--transition);
+  background: var(--mainColor);
+}
+.contact_section .contact_info .field .icon path,
+.contact_section .contact_info .field .icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--mainColor);
+}
+.contact_section .contact_info .field .text {
+  display: flex;
+  flex-direction: column;
+}
+.contact_section .contact_info .field .text h4 {
+  margin-bottom: 4px;
+  color: var(--mainColor);
+  font-size: 13px;
+  font-weight: bold;
+}
+.contact_section .contact_info .field .text a {
+  color: var(--grayColor);
+}
+.contact_section .contact_info .field:hover .text a {
+  color: var(--mainColor);
+}
+.contact_section .contact_info .field:hover .icon {
+  border-color: transparent;
+}
+.contact_section .contact_info .field:hover .icon path,
+.contact_section .contact_info .field:hover .icon svg {
+  fill: var(--whiteColor);
+  z-index: 2;
+}
+.contact_section .contact_info .field:hover .icon::after {
+  opacity: 1;
+}
+
+.customBtn {
+  border: none;
+  outline: none;
+  background: none;
+  isolation: isolate;
+  padding: 12px 16px;
+  width: 160px;
+  margin: auto;
+  border: 1px solid var(--mainColor);
+  color: var(--mainColor);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.customBtn::after {
+  position: absolute;
+  content: "";
+  height: 1000px;
+  width: 0;
+  right: 50%;
+  transition: var(--transition);
+  background: var(--mainColor);
+  transform: rotate(-25deg);
+  z-index: -1;
+}
+.customBtn:hover {
+  color: #fff;
+  border-color: var(--mainColor);
+}
+.customBtn:hover::after {
+  width: 110%;
+  right: -10px;
 }/*# sourceMappingURL=style.css.map */

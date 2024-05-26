@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -18,6 +19,7 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- ================ Header ================= -->
   <header>
@@ -87,142 +89,150 @@
     <section class="explore">
       <div class="container p-0">
         <div class="row m-0">
-          <div class="col-lg-3 col-md-4 p-2 filter" id="filter">
-            <button class="closeFilter" id="closefilter">
-              <img src="img/icons/close.svg" alt="">
-            </button>
-            <aside class="asideFilter">
-              <div class="accordion" id="filterList">
-                <div class="accordion-item">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    Category
-                  </button>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#filterList">
-                    <div class="accordion-body">
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option0"> <img src="img/fav.svg" alt=""> All </label>
-                        <input type="radio" checked name="categories" value="" id="option0" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option1"> <img src="img/categories/icon (1).svg" alt=""> Mobile & Tablets </label>
-                        <input type="radio" name="categories" value="" id="option1" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option2"> <img src="img/categories/icon (2).svg" alt=""> Vehicles </label>
-                        <input type="radio" name="categories" value="" id="option2" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option3"> <img src="img/categories/icon (3).svg" alt=""> Electronics </label>
-                        <input type="radio" name="categories" value="" id="option3" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option4"> <img src="img/categories/icon (4).svg" alt=""> Home & Garden </label>
-                        <input type="radio" name="categories" value="" id="option4" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option5"> <img src="img/categories/icon (5).svg" alt=""> Jobs </label>
-                        <input type="radio" name="categories" value="" id="option5" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Brand & Model
-                  </button>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#filterList">
-                    <div class="accordion-body">
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option6"> Apple </label>
-                        <input type="checkbox" value="" id="option6" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option7"> Samsung </label>
-                        <input type="checkbox" value="" id="option7" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="option8"> Nokia </label>
-                        <input type="checkbox" value="" id="option8" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                    Location
-                  </button>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#filterList">
-                    <div class="accordion-body">
-                      <!-- option -->
-                      <div class="option">
-                        <label for="locationOption0"> All </label>
-                        <input type="radio" checked name="categories" value="" id="locationOption0" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="locationOption1"> New York </label>
-                        <input type="radio" name="categories" value="" id="locationOption1" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="locationOption2"> London </label>
-                        <input type="radio" name="categories" value="" id="locationOption2" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="locationOption3"> Paris </label>
-                        <input type="radio" name="categories" value="" id="locationOption3" />
-                      </div>
-                      <!-- option -->
-                      <div class="option">
-                        <label for="locationOption4"> Shanghai </label>
-                        <input type="radio" name="categories" value="" id="locationOption4" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Price
-                  </button>
-                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#filterList">
-                    <div class="accordion-body">
-                      <div class="priceRange">
-                        <div class="from">
-                          <label for="from">From</label>
-                          <div class="input-group">
-                            <span class="input-group-text" id="addon1">$</span>
-                            <input type="number" class="form-control" id="from" value="0" placeholder="min price"
-                              aria-describedby="addon1">
-                          </div>
+          <div class="col-lg-3 col-md-4 p-2">
+            <!-- search form -->
+            <form class="searchForm d-flex w-100 ">
+              <input type="search" class="form-control" placeholder="Search ">
+              <button class="btn"> <img src="img/icons/search.svg" alt=""> </button>
+            </form>
+            <!-- filter -->
+            <div class="filter" id="filter">
+              <button class="closeFilter" id="closefilter">
+                <img src="img/icons/close.svg" alt="">
+              </button>
+              <aside class="asideFilter">
+                <div class="accordion" id="filterList">
+                  <div class="accordion-item">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Category
+                    </button>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#filterList">
+                      <div class="accordion-body">
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option0"> <img src="img/fav.svg" alt=""> All </label>
+                          <input type="radio" checked name="categories" value="" id="option0" />
                         </div>
-                        <div class="to">
-                          <label for="to">To</label>
-                          <div class="input-group">
-                            <span class="input-group-text" id="addon2">$</span>
-                            <input type="number" class="form-control" id="to" value="99999" placeholder="max price"
-                              aria-describedby="addon2">
-                          </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option1"> <img src="img/categories/icon (1).svg" alt=""> Mobile & Tablets </label>
+                          <input type="radio" name="categories" value="" id="option1" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option2"> <img src="img/categories/icon (2).svg" alt=""> Vehicles </label>
+                          <input type="radio" name="categories" value="" id="option2" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option3"> <img src="img/categories/icon (3).svg" alt=""> Electronics </label>
+                          <input type="radio" name="categories" value="" id="option3" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option4"> <img src="img/categories/icon (4).svg" alt=""> Home & Garden </label>
+                          <input type="radio" name="categories" value="" id="option4" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option5"> <img src="img/categories/icon (5).svg" alt=""> Jobs </label>
+                          <input type="radio" name="categories" value="" id="option5" />
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Brand & Model
+                    </button>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#filterList">
+                      <div class="accordion-body">
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option6"> Apple </label>
+                          <input type="checkbox" value="" id="option6" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option7"> Samsung </label>
+                          <input type="checkbox" value="" id="option7" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="option8"> Nokia </label>
+                          <input type="checkbox" value="" id="option8" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      Location
+                    </button>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#filterList">
+                      <div class="accordion-body">
+                        <!-- option -->
+                        <div class="option">
+                          <label for="locationOption0"> All </label>
+                          <input type="radio" checked name="categories" value="" id="locationOption0" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="locationOption1"> New York </label>
+                          <input type="radio" name="categories" value="" id="locationOption1" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="locationOption2"> London </label>
+                          <input type="radio" name="categories" value="" id="locationOption2" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="locationOption3"> Paris </label>
+                          <input type="radio" name="categories" value="" id="locationOption3" />
+                        </div>
+                        <!-- option -->
+                        <div class="option">
+                          <label for="locationOption4"> Shanghai </label>
+                          <input type="radio" name="categories" value="" id="locationOption4" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Price
+                    </button>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#filterList">
+                      <div class="accordion-body">
+                        <div class="priceRange">
+                          <div class="from">
+                            <label for="from">From</label>
+                            <div class="input-group">
+                              <span class="input-group-text" id="addon1">$</span>
+                              <input type="number" class="form-control" id="from" value="0" placeholder="min price"
+                                aria-describedby="addon1">
+                            </div>
+                          </div>
+                          <div class="to">
+                            <label for="to">To</label>
+                            <div class="input-group">
+                              <span class="input-group-text" id="addon2">$</span>
+                              <input type="number" class="form-control" id="to" value="99999" placeholder="max price"
+                                aria-describedby="addon2">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </aside>
+              </aside>
+            </div>
           </div>
           <div class="col-lg-9 col-md-8 p-0">
             <h5 class="sortBy" id="openfilter">
@@ -238,7 +248,8 @@
                     <img src="img/listing/item (1).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (1).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (1).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -264,7 +275,8 @@
                     <img src="img/listing/item (2).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (2).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (2).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -290,7 +302,8 @@
                     <img src="img/listing/item (3).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (3).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (3).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -316,7 +329,8 @@
                     <img src="img/listing/item (4).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (4).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (4).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -342,7 +356,8 @@
                     <img src="img/listing/item (5).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (5).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (5).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -368,7 +383,8 @@
                     <img src="img/listing/item (6).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (6).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (6).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -394,7 +410,8 @@
                     <img src="img/listing/item (7).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (7).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (7).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -420,7 +437,8 @@
                     <img src="img/listing/item (8).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (8).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (8).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -446,7 +464,8 @@
                     <img src="img/listing/item (9).jpg" loading="lazy" alt="">
                   </a>
                   <div class="itemInfo">
-                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (9).png" loading="lazy" alt=""> </a>
+                    <a href="advertiser.html" class="advertiser"> <img src="img/users/user (9).png" loading="lazy"
+                        alt=""> </a>
                     <div class="time"> <img src="img/icons/clock.svg" alt=""> 1h ago </div>
                     <a href="itemDetails.html" class="title"> Apple MacBook Air (2023) Apple M2 Chip </a>
                     <p class="description"> The Apple MacBook Air 13.6-Inch laptop is powered by the new M2 chip. It is
@@ -512,7 +531,7 @@
         </div>
       </div>
       <div class="d-flex gap-4 flex-wrap justify-content-between pt-4 px-3 border-top align-items-center">
-        <a href="https://maps.app.goo.gl/FU3gh5HK1XywJwe97" class="link" target="_blank">
+        <a href="https://maps.app.goo.gl/9Mg14qzeZY9tq7oeA" class="link" target="_blank">
           <div class="icon">
             <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1"
               data-name="Layer 1" viewBox="0 0 24 24" width="24" height="24">
@@ -578,4 +597,5 @@
   <script src="js/main.js"></script>
   <script src="js/custom.js"></script>
 </body>
+
 </html>
