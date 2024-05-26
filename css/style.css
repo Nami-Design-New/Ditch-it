@@ -1737,7 +1737,7 @@ footer .border-top {
 }
 
 .contact_section {
-  padding: 40px;
+  padding: 40px 0;
 }
 .contact_section form {
   background: #fff;
@@ -2103,7 +2103,7 @@ footer .border-top {
 }
 
 .profile {
-  padding: 40px;
+  padding: 40px 0;
 }
 .profile .userHeader {
   margin-bottom: 32px;
@@ -2176,18 +2176,26 @@ footer .border-top {
 .profile .profileNavCol a {
   padding: 12px 16px;
   display: flex;
+  gap: 8px;
   align-items: center;
   transition: var(--transition);
   border-radius: 12px;
   border: 1px solid #eee;
   text-transform: capitalize;
 }
-.profile .profileNavCol a i {
-  margin-right: 5px;
+.profile .profileNavCol a img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: var(--transition);
 }
 .profile .profileNavCol a.active, .profile .profileNavCol a:hover {
   background-color: var(--mainColor);
   color: var(--whiteColor);
+}
+.profile .profileNavCol a.active img, .profile .profileNavCol a:hover img {
+  filter: brightness(0) invert(1);
 }
 @media (max-width: 760px) {
   .profile .profileNavCol {
