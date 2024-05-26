@@ -1977,6 +1977,9 @@ footer .border-top {
   border-radius: 16px;
   overflow: hidden;
 }
+.cardForm #mapView .gm-style-cc {
+  display: none;
+}
 .cardForm .loginImg {
   width: 100%;
   max-height: 200px;
@@ -2097,4 +2100,138 @@ footer .border-top {
 }
 .profileImage #profileImageInput {
   display: none;
+}
+
+.profile {
+  padding: 40px;
+}
+.profile .userHeader {
+  margin-bottom: 32px;
+  background-color: var(--whiteColor);
+  border-radius: 20px;
+  box-shadow: var(--BigShadow);
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .profile .userHeader {
+    padding: 10px;
+  }
+}
+.profile .userHeader .userInfo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.profile .userHeader .userInfo .userImg {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  border: 1px solid var(--mainColor);
+}
+.profile .userHeader .userInfo .userName {
+  flex: 1;
+}
+.profile .userHeader .userInfo .userName .name {
+  font-weight: bold;
+}
+.profile .userHeader .userInfo .userName .phone {
+  color: var(--grayColor);
+}
+.profile .userHeader .userInfo .control img {
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 760px) {
+  .profile .userHeader .container {
+    padding: 0px !important;
+  }
+  .profile .userHeader .userInfo {
+    padding: 20px 10px;
+  }
+  .profile .userHeader .userInfo img {
+    width: 80px;
+    height: 80px;
+  }
+  .profile .userHeader .userInfo span {
+    margin: 0px 10px;
+  }
+}
+.profile .profileNavCol {
+  background-color: var(--whiteColor);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 90px;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profile .profileNavCol a {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  border-radius: 12px;
+  border: 1px solid #eee;
+  text-transform: capitalize;
+}
+.profile .profileNavCol a i {
+  margin-right: 5px;
+}
+.profile .profileNavCol a.active, .profile .profileNavCol a:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+@media (max-width: 760px) {
+  .profile .profileNavCol {
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .profile .profileNavCol a {
+    padding: 12px 10px;
+    display: inline-flex;
+    flex: 1 140px;
+    border-radius: 8px;
+  }
+}
+.profile .profileContent .notifications {
+  padding: 10px;
+}
+.profile .profileContent .notifications ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.profile .profileContent .notifications ul .notification {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profile .profileContent .notifications ul .notification .notificationTitle {
+  font-weight: bold;
+}
+.profile .profileContent .notifications ul .notification p {
+  color: var(--grayColor);
+}
+.profile .profileContent .notifications ul .notification .date {
+  display: flex;
+  font-size: 13px;
+}
+.profile .cardForm {
+  box-shadow: unset;
+  background-color: #f8f8f8;
+  border: 1px solid #e9e9e9;
 }/*# sourceMappingURL=style.css.map */
