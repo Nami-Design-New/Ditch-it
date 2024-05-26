@@ -1413,7 +1413,9 @@ footer {
       }
     }
   }
-  .advertiserDetails {
+ 
+}
+ .advertiserDetails {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -1453,6 +1455,20 @@ footer {
         }
       }
     }
+    .location,
+    .time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-wrap: balance;
+      gap: 4px;
+      font-size: 13px;
+      color: var(--grayColor);
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
     .date {
       color: var(--grayColor);
       font-size: 13px;
@@ -1483,7 +1499,6 @@ footer {
       }
     }
   }
-}
 .banner {
   // background-image: url(../img/s.jpg) !important;
   background-color: #f5f5f5;

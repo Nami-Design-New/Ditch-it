@@ -1460,7 +1460,8 @@ footer .border-top {
   padding: 8px 16px;
   border-radius: 100px;
 }
-.itemDetails .advertiserDetails {
+
+.advertiserDetails {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1475,13 +1476,13 @@ footer .border-top {
   background-repeat: no-repeat;
   background-size: 150px;
 }
-.itemDetails .advertiserDetails .advertiser {
+.advertiserDetails .advertiser {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 }
-.itemDetails .advertiserDetails .advertiser img {
+.advertiserDetails .advertiser img {
   width: 120px;
   height: 120px;
   -o-object-fit: cover;
@@ -1489,25 +1490,40 @@ footer .border-top {
   border-radius: 100px;
   transition: var(--transition);
 }
-.itemDetails .advertiserDetails .advertiser h3 {
+.advertiserDetails .advertiser h3 {
   font-weight: bold;
   transition: var(--transition);
   text-transform: capitalize;
 }
-.itemDetails .advertiserDetails .advertiser:hover .name {
+.advertiserDetails .advertiser:hover .name {
   color: var(--mainColor);
 }
-.itemDetails .advertiserDetails .date {
+.advertiserDetails .location,
+.advertiserDetails .time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-wrap: balance;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--grayColor);
+}
+.advertiserDetails .location img,
+.advertiserDetails .time img {
+  width: 16px;
+  height: 16px;
+}
+.advertiserDetails .date {
   color: var(--grayColor);
   font-size: 13px;
 }
-.itemDetails .advertiserDetails .contact {
+.advertiserDetails .contact {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px;
 }
-.itemDetails .advertiserDetails .contact a {
+.advertiserDetails .contact a {
   flex: 1;
   padding: 12px 16px;
   border-radius: 16px;
@@ -1517,14 +1533,14 @@ footer .border-top {
   text-transform: capitalize;
   font-size: 16px;
 }
-.itemDetails .advertiserDetails .contact a img {
+.advertiserDetails .contact a img {
   width: 20px;
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
   filter: brightness(0) invert(1);
 }
-.itemDetails .advertiserDetails .contact a.call {
+.advertiserDetails .contact a.call {
   background-color: #2562d3;
 }
 
