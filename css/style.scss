@@ -2321,7 +2321,6 @@ footer {
       text-align: start;
       border: 1px solid #ffffff;
       background-color: var(--whiteColor);
-
       .userImg {
         width: 64px;
         min-width: 64px;
@@ -2386,7 +2385,6 @@ footer {
           object-fit: cover;
         }
       }
-
       &.active {
         background-color: var(--mainColor10) !important;
         .adsItem {
@@ -2500,7 +2498,6 @@ footer {
         padding: 20px 0;
         overflow-y: scroll;
         flex: 1;
-
         &::-webkit-scrollbar {
           display: none;
         }
@@ -2597,7 +2594,6 @@ footer {
       }
     }
   }
-
   .openTaps {
     width: 96%;
     padding: 12px;
