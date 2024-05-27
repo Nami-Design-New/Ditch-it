@@ -2511,7 +2511,7 @@ footer {
           &.sent-message {
             justify-content: flex-end;
             .message-content {
-              background: #fafafa;
+              background: var(--whiteColor);
               padding: 10px 16px;
               border-radius: 12px;
               border-bottom-right-radius: 0;
@@ -2543,7 +2543,7 @@ footer {
           .input-field {
             width: 100%;
             border-radius: 16px;
-            background: #fafafa;
+            background: var(--whiteColor);
             padding: 0 16px;
             display: flex;
             gap: 8px;
