@@ -2269,6 +2269,7 @@ footer {
   gap: 16px;
   @media (max-width: 768px) {
     flex-direction: column;
+    height: auto;
   }
   .side-menu {
     padding: 12px;
@@ -2402,7 +2403,7 @@ footer {
       width: 100%;
       height: 100%;
       @media screen and (max-width: 768px) {
-        max-height: calc(80dvh - 110px);
+        max-height: calc(90dvh - 0px);
       }
       display: flex;
       flex-direction: column;

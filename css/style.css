@@ -2334,6 +2334,7 @@ footer .border-top {
 @media (max-width: 768px) {
   .chat-section {
     flex-direction: column;
+    height: auto;
   }
 }
 .chat-section .side-menu {
@@ -2480,7 +2481,7 @@ footer .border-top {
 }
 @media screen and (max-width: 768px) {
   .chat-section .tab-content .chat-container {
-    max-height: calc(80dvh - 110px);
+    max-height: calc(90dvh - 0px);
   }
 }
 .chat-section .tab-content .chat-container .chat-head {
