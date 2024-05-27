@@ -60,7 +60,7 @@
                         <img src="img/icons/user.svg" alt="">
                     </button>
                     <div class="dropdown-menu" aria-labelledby="myAccount">
-                             <a href="login.html" class="dropdown-item"> login </a>
+                        <a href="login.html" class="dropdown-item"> login </a>
                         <a href="myPosts.html" class="dropdown-item"> my posts </a>
                         <a href="notifications.html" class="dropdown-item"> notifications </a>
                         <a href="bought.html" class="dropdown-item"> Bought </a>
@@ -96,13 +96,11 @@
                     <!-- links -->
                     <div class="col-md-5 col-lg-4 col-xl-3 p-1">
                         <!-- user Header  -->
-                        <div class=" userHeader">
-                            <div class="userInfo">
-                                <img class="userImg" src="img/placeholder.svg" alt="">
-                                <div class="userName">
-                                    <h4 class="name"> Mahmoud Elkomy </h4>
-                                    <span class="phone"> +1 0123456789 </span>
-                                </div>
+                        <div class="userInfo">
+                            <img class="userImg" src="img/placeholder.svg" alt="">
+                            <div class="userName">
+                                <h4 class="name"> Mahmoud Elkomy </h4>
+                                <span class="phone"> +1 0123456789 </span>
                             </div>
                         </div>
                         <div class="profileNavCol">
@@ -118,6 +116,28 @@
                     </div>
                     <!-- content -->
                     <div class=" col-md-7 col-lg-8 col-xl-9 p-2 profileContent">
+
+                      
+
+                        <form class=" p-2 p-md-5" data-aos="fade-up">
+
+                            <div class="topImg">
+                                <img src="img/verify.svg" alt="">
+                                <h5> Please Verify your account by uploading your ID </h5>
+    
+                            </div>
+                            <div class="profileImage wide">
+                                <input type="file" id="profileImageInput" accept="image/*" />
+                                <label for="profileImageInput" class="profileImageLabel">
+                                    <img src="img/icons/uploadImg.svg" alt="Profile Image" id="profileImagePreview" />
+                                </label>
+                                <span><img src="img/icons/plus.svg" alt=""></span>
+                            </div>
+
+                            <button type="submit" class="customBtn mt-4"> Submit </button>
+                        </form>
+
+
                     </div>
                 </div>
             </div>

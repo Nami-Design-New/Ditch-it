@@ -1105,6 +1105,73 @@ footer .border-top {
   font-weight: bold;
   font-size: 20px;
 }
+.item .dropdown {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 3;
+}
+.item .dropdown button {
+  height: 32px;
+  width: 32px;
+  border-radius: 100px;
+  background-color: var(--whiteColor);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item .dropdown button img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.item .dropdown button::after {
+  display: none;
+}
+.item .dropdown .dropdown-menu {
+  inset: unset !important;
+  transform: unset !important;
+  left: 0 !important;
+  top: calc(100% + 4px) !important;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  --bs-dropdown-min-width: 7rem;
+}
+.item .dropdown .dropdown-menu .dropdown-item {
+  padding: 6px 12px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.item .dropdown .dropdown-menu .dropdown-item img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.item .status {
+  color: var(--darkColor);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+.item .status.avilable {
+  background-color: var(--mainColor10);
+  color: var(--mainColor);
+}
+.item .status.promoted {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+.item .status.sold {
+  background-color: var(--darkColor);
+  color: var(--whiteColor);
+}
 .item:hover .itemImg img {
   transform: scale(1.1);
 }
@@ -2096,6 +2163,7 @@ footer .border-top {
   left: 12px;
   background-color: var(--whiteColor);
   border-radius: 100%;
+  pointer-events: none;
 }
 .profileImage span img {
   width: 32px;
@@ -2106,29 +2174,41 @@ footer .border-top {
 .profileImage #profileImageInput {
   display: none;
 }
+.profileImage.wide {
+  margin: unset;
+}
+.profileImage.wide .profileImageLabel {
+  cursor: pointer;
+}
+.profileImage.wide .profileImageLabel img {
+  width: 100%;
+  border-radius: 12px;
+  aspect-ratio: 3/2;
+  max-height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.profileImage.wide span {
+  bottom: -4px;
+  left: -4px;
+}
 
 .profile {
   padding: 40px 0;
 }
-.profile .userHeader {
+.profile .userInfo {
   margin-bottom: 32px;
   background-color: var(--whiteColor);
   border-radius: 20px;
   box-shadow: var(--BigShadow);
   padding: 20px;
-}
-@media (max-width: 768px) {
-  .profile .userHeader {
-    padding: 10px;
-  }
-}
-.profile .userHeader .userInfo {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
 }
-.profile .userHeader .userInfo .userImg {
+.profile .userInfo .userImg {
   width: 80px;
   height: 80px;
   -o-object-fit: cover;
@@ -2136,33 +2216,15 @@ footer .border-top {
   border-radius: 100%;
   border: 1px solid var(--mainColor);
 }
-.profile .userHeader .userInfo .userName {
+.profile .userInfo .userName {
   flex: 1;
+  white-space: nowrap;
 }
-.profile .userHeader .userInfo .userName .name {
+.profile .userInfo .userName .name {
   font-weight: bold;
 }
-.profile .userHeader .userInfo .userName .phone {
+.profile .userInfo .userName .phone {
   color: var(--grayColor);
-}
-.profile .userHeader .userInfo .control img {
-  width: 32px;
-  height: 32px;
-}
-@media (max-width: 760px) {
-  .profile .userHeader .container {
-    padding: 0px !important;
-  }
-  .profile .userHeader .userInfo {
-    padding: 20px 10px;
-  }
-  .profile .userHeader .userInfo img {
-    width: 80px;
-    height: 80px;
-  }
-  .profile .userHeader .userInfo span {
-    margin: 0px 10px;
-  }
 }
 .profile .profileNavCol {
   background-color: var(--whiteColor);
@@ -2242,6 +2304,19 @@ footer .border-top {
 .profile .profileContent .notifications ul .notification .date {
   display: flex;
   font-size: 13px;
+}
+.profile .profileContent .topImg {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.profile .profileContent .topImg img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 200px;
 }
 .profile .cardForm {
   box-shadow: unset;
