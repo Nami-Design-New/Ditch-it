@@ -2478,6 +2478,11 @@ footer .border-top {
   background: linear-gradient(rgba(243, 243, 243, 0.9098039216), rgba(243, 243, 243, 0.9098039216)), url(https://www.shutterstock.com/image-vector/social-media-sketch-vector-seamless-600nw-1660950727.jpg);
   border-radius: 16px;
 }
+@media screen and (max-width: 768px) {
+  .chat-section .tab-content .chat-container {
+    max-height: calc(80dvh - 110px);
+  }
+}
 .chat-section .tab-content .chat-container .chat-head {
   border-radius: 14px 14px 0 0;
   display: flex;
@@ -2551,7 +2556,7 @@ footer .border-top {
   align-items: center;
   gap: 8px;
   padding: 8px;
-  background: #E5F6ED;
+  background: #e5f6ed;
 }
 .chat-section .tab-content .chat-container .adItem p {
   color: var(--mainColor);
