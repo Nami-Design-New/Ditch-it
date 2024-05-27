@@ -22,7 +22,7 @@ $(document).ready(function () {
   });
   // Get the current URL path
   var currentPath = window.location.pathname.split("/").pop();
-  $("header .navLink").each(function () {
+  $("header .navLink , .profileNavCol a").each(function () {
     var linkPath = $(this).attr("href").split("/").pop();
     if (linkPath === currentPath) {
       $(this).addClass("active");

@@ -326,6 +326,7 @@ content {
   transition: 0.3s;
   opacity: 0;
   overflow: unset;
+  height: auto;
 }
 .swiper .swiper-slide-prev {
   transform-origin: right center;
@@ -1067,6 +1068,10 @@ footer .border-top {
 .item .itemInfo .time img {
   width: 16px;
   height: 16px;
+}
+.item .itemInfo .promoted {
+  color: var(--mainColor);
+  text-transform: capitalize;
 }
 .item .itemInfo .itemBottom {
   display: flex;

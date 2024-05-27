@@ -301,6 +301,7 @@ content {
     transition: 0.3s;
     opacity: 0;
     overflow: unset;
+    height: auto;
   }
   .swiper-slide-prev {
     transform-origin: right center;
@@ -1018,6 +1019,10 @@ footer {
         width: 16px;
         height: 16px;
       }
+    }
+    .promoted{
+      color: var(--mainColor);
+      text-transform: capitalize;
     }
     .itemBottom {
       display: flex;
