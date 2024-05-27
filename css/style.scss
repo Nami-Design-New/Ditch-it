@@ -2264,6 +2264,12 @@ footer {
 /* Chat Section */
 .chat-section {
   padding: 24px 0;
+  height: 80dvh;
+  display: flex;
+  gap: 16px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   .side-menu {
     padding: 12px;
     background: #eee;
@@ -2271,6 +2277,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex: 1;
+    min-width: 350px;
     @media (max-width: 768px) {
       display: block;
       position: fixed;
@@ -2313,7 +2321,7 @@ footer {
       text-align: start;
       border: 1px solid #ffffff;
       background-color: var(--whiteColor);
-     
+
       .userImg {
         width: 64px;
         min-width: 64px;
@@ -2379,7 +2387,7 @@ footer {
         }
       }
 
-      &.active{
+      &.active {
         background-color: var(--mainColor10) !important;
         .adsItem {
           background-color: var(--mainColor10);
@@ -2387,198 +2395,205 @@ footer {
       }
     }
   }
-  .chat-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #0000001a;
-    border-radius: 16px;
-    .chat-head {
-      border-radius: 14px 14px 0 0;
+  .tab-content {
+    flex: 3;
+    .tab-pane {
+      height: 100%;
+    }
+    .chat-container {
+      width: 100%;
+      height: 100%;
       display: flex;
-      padding: 14px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      background: #fafafa;
-      .user {
+      flex-direction: column;
+       background: linear-gradient(#f3f3f3e8, #f3f3f3e8) , url(https://www.shutterstock.com/image-vector/social-media-sketch-vector-seamless-600nw-1660950727.jpg);
+      border-radius: 16px;
+      .chat-head {
+        border-radius: 14px 14px 0 0;
         display: flex;
+        padding: 14px;
         align-items: center;
-        gap: 8px;
-        img {
-          width: 40px;
-          height: 40px;
-          object-fit: cover;
-          border-radius: 50%;
-        }
-        .name {
-          color: var(--darkColor);
-          font-size: 18px;
-          font-weight: 600;
-        }
-      }
-      .setting {
-        button {
-          height: 32px;
-          width: 32px;
-          border-radius: 100px;
-          background-color: var(--whiteColor);
-          padding: 4px;
+        justify-content: space-between;
+        gap: 16px;
+        background: #fafafa;
+        .user {
           display: flex;
           align-items: center;
-          justify-content: center;
+          gap: 8px;
           img {
-            width: 16px;
-            height: 16px;
-            object-fit: contain;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
           }
-          &::after {
-            display: none;
+          .name {
+            color: var(--darkColor);
+            font-weight: bold;
           }
         }
-        .dropdown-menu {
-          inset: unset !important;
-          transform: unset !important;
-          right: 0 !important;
-          top: calc(100% + 4px) !important;
-          border: none;
-          border-radius: 16px;
-          overflow: hidden;
-          box-shadow: var(--BigShadow);
-          --bs-dropdown-min-width: 7rem;
-          .dropdown-item {
-            padding: 6px 12px;
-            text-transform: capitalize;
+        .setting {
+          button {
+            height: 32px;
+            width: 32px;
+            border-radius: 100px;
+            background-color: var(--whiteColor);
+            padding: 4px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
             img {
               width: 16px;
               height: 16px;
               object-fit: contain;
             }
-          }
-        }
-      }
-    }
-    .adItem {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px;
-      background: var(--mainColor10);
-      p {
-        color: var(--mainColor);
-      }
-      img {
-        width: 40px;
-        height: 40px;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-    }
-    .inner-container {
-      display: flex;
-      flex-direction: column;
-      padding: 20px 0;
-      min-height: 320px;
-      overflow-y: scroll;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      .message {
-        width: 100%;
-        display: flex;
-        padding: 0 16px;
-        .time {
-          color: var(--grayColor);
-          font-size: 12px;
-        }
-        &.sent-message {
-          justify-content: flex-end;
-          .message-content {
-            background: #fafafa;
-            padding: 10px 16px;
-            border-radius: 12px;
-            border-bottom-right-radius: 0;
-            color: var(--darkColor);
-            position: relative;
-          }
-        }
-        &.recieved-message {
-          justify-content: flex-start;
-          .message-content {
-            background: var(--mainColor);
-            padding: 10px 16px;
-            border-radius: 12px;
-            border-bottom-left-radius: 0;
-            position: relative;
-            p {
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
-    .chat-send {
-      width: 100%;
-      padding: 8px;
-      form {
-        display: flex;
-        gap: 8px;
-        .input-field {
-          width: 100%;
-          border-radius: 16px;
-          background: #fafafa;
-          padding: 0 16px;
-          display: flex;
-          gap: 8px;
-          align-items: center;
-          justify-content: space-between;
-          input {
-            height: 100%;
-            border: none;
-            background: none;
-            outline: none;
-            flex: 1;
-            color: var(--grayColor);
-          }
-          .files-input {
-      
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            img {
-              width: 24px;
-              height: 24px;
-              object-fit: contain;
-            }
-            input {
+            &::after {
               display: none;
             }
           }
+          .dropdown-menu {
+            inset: unset !important;
+            transform: unset !important;
+            right: 0 !important;
+            top: calc(100% + 4px) !important;
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--BigShadow);
+            --bs-dropdown-min-width: 7rem;
+            .dropdown-item {
+              padding: 6px 12px;
+              text-transform: capitalize;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              img {
+                width: 16px;
+                height: 16px;
+                object-fit: contain;
+              }
+            }
+          }
         }
-        button {
-          border: none;
-          background: none;
-          outline: none;
-          border-radius: 16px;
-          width: 70px;
-          height: 56px;
-          background: var(--mainColor);
+      }
+      .adItem {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        background: #E5F6ED;
+        p {
+          color: var(--mainColor);
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+      .inner-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        overflow-y: scroll;
+        flex: 1;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .message {
+          width: 100%;
           display: flex;
-          justify-content: center;
-          align-items: center;
-          img {
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
+          padding: 0 16px;
+          .time {
+            color: var(--grayColor);
+            font-size: 12px;
+          }
+          &.sent-message {
+            justify-content: flex-end;
+            .message-content {
+              background: #fafafa;
+              padding: 10px 16px;
+              border-radius: 12px;
+              border-bottom-right-radius: 0;
+              color: var(--darkColor);
+              position: relative;
+            }
+          }
+          &.recieved-message {
+            justify-content: flex-start;
+            .message-content {
+              background: var(--mainColor);
+              padding: 10px 16px;
+              border-radius: 12px;
+              border-bottom-left-radius: 0;
+              position: relative;
+              p {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .chat-send {
+        width: 100%;
+        padding: 8px;
+        form {
+          display: flex;
+          gap: 8px;
+          .input-field {
+            width: 100%;
+            border-radius: 16px;
+            background: #fafafa;
+            padding: 0 16px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: space-between;
+            input {
+              height: 100%;
+              border: none;
+              background: none;
+              outline: none;
+              flex: 1;
+              color: var(--grayColor);
+            }
+            .files-input {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              img {
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+              }
+              input {
+                display: none;
+              }
+            }
+          }
+          button {
+            border: none;
+            background: none;
+            outline: none;
+            border-radius: 16px;
+            width: 70px;
+            height: 56px;
+            background: var(--mainColor);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 20px;
+              height: 20px;
+              object-fit: contain;
+            }
           }
         }
       }
     }
   }
+
   .openTaps {
     width: 96%;
     padding: 12px;
@@ -2595,7 +2610,7 @@ footer {
     @media (max-width: 768px) {
       display: flex;
     }
-    img{
+    img {
       width: 20px;
       height: 20px;
       object-fit: contain;

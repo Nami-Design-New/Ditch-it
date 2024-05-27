@@ -92,173 +92,362 @@
         <img src="img/icons/chats.svg" alt="">
         <span> Chats </span>
       </button>
-      <div class="row">
-        <!-- Tab-list -->
-        <div class="nav-pills col-md-5 col-lg-4 col-xl-3 side-menu" id="v-pills-tab" role="tablist"
-          aria-orientation="vertical">
-          <div class="colse">
-            <img src="img/icons/close.svg" alt="">
-          </div>
-          <!-- tab -->
-          <button class="nav-link active d-flex justify-content-between" id="chat1-tab" data-bs-toggle="pill"
-            data-bs-target="#chat1" type="button" role="tab" aria-controls="chat1" aria-selected="true">
-            <img class="userImg" src="img/users/user (5).png" alt="user">
-            <div class="text-wrap">
-              <h5 class="name"> Emad magdy </h5>
-              <p class="lastMessage unread">
-                Can you provide more p...
-                <span class="unreadNumber"> 2 </span>
-              </p>
-              <span class="time"> 10:00AM </span>
-            </div>
-            <div class="adsItem">
-              <p> Apple MacBook Air (2023) Apple M... </p>
-              <img src="img/listing/item (1).jpg" class="adImg" alt="">
-            </div>
-          </button>
-          <!-- tab -->
-          <button class="nav-link d-flex justify-content-between" id="chat2-tab" data-bs-toggle="pill"
-            data-bs-target="#chat2" type="button" role="tab" aria-controls="chat2" aria-selected="false">
-            <img class="userImg" src="img/users/user (1).png" alt="user">
-            <div class="text-wrap">
-              <h5 class="name"> Emad magdy </h5>
-              <p class="lastMessage">
-                Can you provide more p...
-              </p>
-              <span class="time"> 10:00AM </span>
-            </div>
-            <div class="adsItem">
-              <p> Lorem ipsum dolor sit, amet cons... </p>
-              <img src="img/listing/item (2).jpg" class="adImg" alt="">
-            </div>
-          </button>
+      <!-- Tab-list -->
+      <div class="nav-pills side-menu" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <div class="colse">
+          <img src="img/icons/close.svg" alt="">
         </div>
-        <div class="tab-content col-md-7 col-lg-8 col-xl-9 p-0 ps-md-3" id="v-pills-tabContent">
-          <!-- chat -->
-          <div class="tab-pane fade show active" id="chat1" role="tabpanel" aria-labelledby="chat1-tab">
-            <div class="chat-container">
-              <div class="chat-head">
-                <div class="user">
-                  <img src="img/users/user (5).png" alt="">
-                  <h6 class="name"> Emad magdy </h6>
-                </div>
-                <div class="dropdown setting">
-                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="img/icons/dots.svg" alt="">
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> sold </a></li>
-                    <li><a class="dropdown-item" href="#"> block </a></li>
-                  </ul>
-                </div>
-              </div>
-              <a href="itemDetails.html" class="adItem">
-                <img src="img/listing/item (1).jpg" alt="">
-                <p> Apple MacBook Air (2023) Apple M2 Chip </p>
-              </a>
-              <div class="inner-container">
-                <div class="sent-message message">
-                  <div class="d-flex flex-column">
-                    <div class="message-content">
-                      <p> hi </p>
-                    </div>
-                    <span class="time align-self-end">10:00AM</span>
-                  </div>
-                </div>
-                <div class="recieved-message message">
-                  <div class="d-flex flex-column">
-                    <div class="message-content">
-                      <p> hello how are you </p>
-                    </div>
-                    <span class="time align-self-start">10:02AM</span>
-                  </div>
-                </div>
-              </div>
-              <div class="chat-send">
-                <form action="" method="post">
-                  <div class="input-field">
-                    <input type="text" placeholder=" write Here ...">
-                    <label class="files-input">
-                      <img src="img/icons/paperclip.svg" alt="">
-                      <input type="file" name="userImage" id="img-upload" accept="image/*">
-                    </label>
-                    <label class="files-input">
-                      <img src="img/icons/record.svg" alt="">
-                      <input type="" >
-                    </label>
-                  </div>
-                  <button type="submit">
-                    <img src="img/icons/send.svg" alt="">
-                  </button>
-                </form>
-              </div>
-            </div>
+        <!-- tab -->
+        <button class="nav-link active d-flex justify-content-between" id="chat1-tab" data-bs-toggle="pill"
+          data-bs-target="#chat1" type="button" role="tab" aria-controls="chat1" aria-selected="true">
+          <img class="userImg" src="img/users/user (5).png" alt="user">
+          <div class="text-wrap">
+            <h6 class="name"> Emad magdy </h6>
+            <p class="lastMessage unread">
+              Can you provide more p...
+              <span class="unreadNumber"> 2 </span>
+            </p>
+            <span class="time"> 10:00AM </span>
           </div>
-          <!-- chat -->
-          <div class="tab-pane fade" id="chat2" role="tabpanel" aria-labelledby="chat2-tab">
-            <div class="chat-container">
-              <div class="chat-head">
-                <div class="user">
-                  <img src="img/users/user (1).png" alt="">
-                  <h6 class="name"> mostafta ahmed </h6>
-                </div>
-                <div class="dropdown setting">
-                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="img/icons/dots.svg" alt="">
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> sold </a></li>
-                    <li><a class="dropdown-item" href="#"> block </a></li>
-                  </ul>
-                </div>
-              </div>
-
-
-              <a href="itemDetails.html" class="adItem">
-                <img src="img/listing/item (1).jpg" alt="">
-                <p> Apple MacBook Air (2023) Apple M2 Chip </p>
-              </a>
-              <div class="inner-container">
-                <div class="sent-message message">
-                  <div class="d-flex flex-column">
-                    <div class="message-content">
-                      <p> hi </p>
-                    </div>
-                    <span class="time align-self-end">10:00AM</span>
-                  </div>
-                </div>
-                <div class="recieved-message message">
-                  <div class="d-flex flex-column">
-                    <div class="message-content">
-                      <p> hello how are you </p>
-                    </div>
-                    <span class="time align-self-start">10:02AM</span>
-                  </div>
-                </div>
-              </div>
-              <div class="chat-send">
-                <form action="" method="post">
-                  <div class="input-field">
-                    <input type="text" placeholder=" write Here ...">
-                    <label class="files-input">
-                      <img src="img/icons/paperclip.svg" alt="">
-                      <input type="file" name="userImage" id="img-upload" accept="image/*">
-                    </label>
-                    <label class="files-input">
-                      <img src="img/icons/record.svg" alt="">
-                      <input type="" >
-                    </label>
-                  </div>
-                  <button type="submit">
-                    <img src="img/icons/send.svg" alt="">
-                  </button>
-                </form>
-              </div>
-            </div>
+          <div class="adsItem">
+            <p> Apple MacBook Air (2023) Apple M... </p>
+            <img src="img/listing/item (1).jpg" class="adImg" alt="">
           </div>
-        </div>
-        <!-- </div> -->
+        </button>
+        <!-- tab -->
+        <button class="nav-link d-flex justify-content-between" id="chat2-tab" data-bs-toggle="pill"
+          data-bs-target="#chat2" type="button" role="tab" aria-controls="chat2" aria-selected="false">
+          <img class="userImg" src="img/users/user (1).png" alt="user">
+          <div class="text-wrap">
+            <h6 class="name"> Emad magdy </h6>
+            <p class="lastMessage">
+              Can you provide more p...
+            </p>
+            <span class="time"> 10:00AM </span>
+          </div>
+          <div class="adsItem">
+            <p> Lorem ipsum dolor sit, amet cons... </p>
+            <img src="img/listing/item (2).jpg" class="adImg" alt="">
+          </div>
+        </button>
       </div>
+      <div class="tab-content" id="v-pills-tabContent">
+        <!-- chat -->
+        <div class="tab-pane fade show active" id="chat1" role="tabpanel" aria-labelledby="chat1-tab">
+          <div class="chat-container">
+            <div class="chat-head">
+              <div class="user">
+                <img src="img/users/user (5).png" alt="">
+                <h6 class="name"> Emad magdy </h6>
+              </div>
+              <div class="dropdown setting">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img/icons/dots.svg" alt="">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"> sold </a></li>
+                  <li><a class="dropdown-item" href="#"> block </a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="itemDetails.html" class="adItem">
+              <img src="img/listing/item (1).jpg" alt="">
+              <p> Apple MacBook Air (2023) Apple M2 Chip </p>
+            </a>
+            <div class="inner-container">
+              <div class="sent-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hi </p>
+                  </div>
+                  <span class="time align-self-end">10:00AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+            </div>
+            <div class="chat-send">
+              <form action="" method="post">
+                <div class="input-field">
+                  <input type="text" placeholder=" write Here ...">
+                  <label class="files-input">
+                    <img src="img/icons/paperclip.svg" alt="">
+                    <input type="file" name="userImage" id="img-upload" accept="image/*">
+                  </label>
+                  <label class="files-input">
+                    <img src="img/icons/record.svg" alt="">
+                    <input type="">
+                  </label>
+                </div>
+                <button type="submit">
+                  <img src="img/icons/send.svg" alt="">
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- chat -->
+        <div class="tab-pane fade" id="chat2" role="tabpanel" aria-labelledby="chat2-tab">
+          <div class="chat-container">
+            <div class="chat-head">
+              <div class="user">
+                <img src="img/users/user (1).png" alt="">
+                <h6 class="name"> mostafta ahmed </h6>
+              </div>
+              <div class="dropdown setting">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img/icons/dots.svg" alt="">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"> sold </a></li>
+                  <li><a class="dropdown-item" href="#"> block </a></li>
+                </ul>
+              </div>
+            </div>
+
+
+            <a href="itemDetails.html" class="adItem">
+              <img src="img/listing/item (1).jpg" alt="">
+              <p> Apple MacBook Air (2023) Apple M2 Chip </p>
+            </a>
+            <div class="inner-container">
+              <div class="sent-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hi </p>
+                  </div>
+                  <span class="time align-self-end">10:00AM</span>
+                </div>
+              </div>
+              <div class="recieved-message message">
+                <div class="d-flex flex-column">
+                  <div class="message-content">
+                    <p> hello how are you </p>
+                  </div>
+                  <span class="time align-self-start">10:02AM</span>
+                </div>
+              </div>
+            </div>
+            <div class="chat-send">
+              <form action="" method="post">
+                <div class="input-field">
+                  <input type="text" placeholder=" write Here ...">
+                  <label class="files-input">
+                    <img src="img/icons/paperclip.svg" alt="">
+                    <input type="file" name="userImage" id="img-upload" accept="image/*">
+                  </label>
+                  <label class="files-input">
+                    <img src="img/icons/record.svg" alt="">
+                    <input type="">
+                  </label>
+                </div>
+                <button type="submit">
+                  <img src="img/icons/send.svg" alt="">
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
     </section>
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->

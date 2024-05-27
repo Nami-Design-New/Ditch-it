@@ -2327,6 +2327,14 @@ footer .border-top {
 /* Chat Section */
 .chat-section {
   padding: 24px 0;
+  height: 80dvh;
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .chat-section {
+    flex-direction: column;
+  }
 }
 .chat-section .side-menu {
   padding: 12px;
@@ -2335,6 +2343,8 @@ footer .border-top {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1;
+  min-width: 350px;
 }
 @media (max-width: 768px) {
   .chat-section .side-menu {
@@ -2454,14 +2464,21 @@ footer .border-top {
 .chat-section .side-menu .nav-link.active .adsItem {
   background-color: var(--mainColor10);
 }
-.chat-section .chat-container {
+.chat-section .tab-content {
+  flex: 3;
+}
+.chat-section .tab-content .tab-pane {
+  height: 100%;
+}
+.chat-section .tab-content .chat-container {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.1019607843);
+  background: linear-gradient(rgba(243, 243, 243, 0.9098039216), rgba(243, 243, 243, 0.9098039216)), url(https://www.shutterstock.com/image-vector/social-media-sketch-vector-seamless-600nw-1660950727.jpg);
   border-radius: 16px;
 }
-.chat-section .chat-container .chat-head {
+.chat-section .tab-content .chat-container .chat-head {
   border-radius: 14px 14px 0 0;
   display: flex;
   padding: 14px;
@@ -2470,24 +2487,23 @@ footer .border-top {
   gap: 16px;
   background: #fafafa;
 }
-.chat-section .chat-container .chat-head .user {
+.chat-section .tab-content .chat-container .chat-head .user {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.chat-section .chat-container .chat-head .user img {
+.chat-section .tab-content .chat-container .chat-head .user img {
   width: 40px;
   height: 40px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-.chat-section .chat-container .chat-head .user .name {
+.chat-section .tab-content .chat-container .chat-head .user .name {
   color: var(--darkColor);
-  font-size: 18px;
-  font-weight: 600;
+  font-weight: bold;
 }
-.chat-section .chat-container .chat-head .setting button {
+.chat-section .tab-content .chat-container .chat-head .setting button {
   height: 32px;
   width: 32px;
   border-radius: 100px;
@@ -2497,16 +2513,16 @@ footer .border-top {
   align-items: center;
   justify-content: center;
 }
-.chat-section .chat-container .chat-head .setting button img {
+.chat-section .tab-content .chat-container .chat-head .setting button img {
   width: 16px;
   height: 16px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.chat-section .chat-container .chat-head .setting button::after {
+.chat-section .tab-content .chat-container .chat-head .setting button::after {
   display: none;
 }
-.chat-section .chat-container .chat-head .setting .dropdown-menu {
+.chat-section .tab-content .chat-container .chat-head .setting .dropdown-menu {
   inset: unset !important;
   transform: unset !important;
   right: 0 !important;
@@ -2517,59 +2533,59 @@ footer .border-top {
   box-shadow: var(--BigShadow);
   --bs-dropdown-min-width: 7rem;
 }
-.chat-section .chat-container .chat-head .setting .dropdown-menu .dropdown-item {
+.chat-section .tab-content .chat-container .chat-head .setting .dropdown-menu .dropdown-item {
   padding: 6px 12px;
   text-transform: capitalize;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.chat-section .chat-container .chat-head .setting .dropdown-menu .dropdown-item img {
+.chat-section .tab-content .chat-container .chat-head .setting .dropdown-menu .dropdown-item img {
   width: 16px;
   height: 16px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.chat-section .chat-container .adItem {
+.chat-section .tab-content .chat-container .adItem {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px;
-  background: var(--mainColor10);
+  background: #E5F6ED;
 }
-.chat-section .chat-container .adItem p {
+.chat-section .tab-content .chat-container .adItem p {
   color: var(--mainColor);
 }
-.chat-section .chat-container .adItem img {
+.chat-section .tab-content .chat-container .adItem img {
   width: 40px;
   height: 40px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
 }
-.chat-section .chat-container .inner-container {
+.chat-section .tab-content .chat-container .inner-container {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
-  min-height: 320px;
   overflow-y: scroll;
+  flex: 1;
 }
-.chat-section .chat-container .inner-container::-webkit-scrollbar {
+.chat-section .tab-content .chat-container .inner-container::-webkit-scrollbar {
   display: none;
 }
-.chat-section .chat-container .inner-container .message {
+.chat-section .tab-content .chat-container .inner-container .message {
   width: 100%;
   display: flex;
   padding: 0 16px;
 }
-.chat-section .chat-container .inner-container .message .time {
+.chat-section .tab-content .chat-container .inner-container .message .time {
   color: var(--grayColor);
   font-size: 12px;
 }
-.chat-section .chat-container .inner-container .message.sent-message {
+.chat-section .tab-content .chat-container .inner-container .message.sent-message {
   justify-content: flex-end;
 }
-.chat-section .chat-container .inner-container .message.sent-message .message-content {
+.chat-section .tab-content .chat-container .inner-container .message.sent-message .message-content {
   background: #fafafa;
   padding: 10px 16px;
   border-radius: 12px;
@@ -2577,28 +2593,28 @@ footer .border-top {
   color: var(--darkColor);
   position: relative;
 }
-.chat-section .chat-container .inner-container .message.recieved-message {
+.chat-section .tab-content .chat-container .inner-container .message.recieved-message {
   justify-content: flex-start;
 }
-.chat-section .chat-container .inner-container .message.recieved-message .message-content {
+.chat-section .tab-content .chat-container .inner-container .message.recieved-message .message-content {
   background: var(--mainColor);
   padding: 10px 16px;
   border-radius: 12px;
   border-bottom-left-radius: 0;
   position: relative;
 }
-.chat-section .chat-container .inner-container .message.recieved-message .message-content p {
+.chat-section .tab-content .chat-container .inner-container .message.recieved-message .message-content p {
   color: #fff;
 }
-.chat-section .chat-container .chat-send {
+.chat-section .tab-content .chat-container .chat-send {
   width: 100%;
   padding: 8px;
 }
-.chat-section .chat-container .chat-send form {
+.chat-section .tab-content .chat-container .chat-send form {
   display: flex;
   gap: 8px;
 }
-.chat-section .chat-container .chat-send form .input-field {
+.chat-section .tab-content .chat-container .chat-send form .input-field {
   width: 100%;
   border-radius: 16px;
   background: #fafafa;
@@ -2608,7 +2624,7 @@ footer .border-top {
   align-items: center;
   justify-content: space-between;
 }
-.chat-section .chat-container .chat-send form .input-field input {
+.chat-section .tab-content .chat-container .chat-send form .input-field input {
   height: 100%;
   border: none;
   background: none;
@@ -2616,22 +2632,22 @@ footer .border-top {
   flex: 1;
   color: var(--grayColor);
 }
-.chat-section .chat-container .chat-send form .input-field .files-input {
+.chat-section .tab-content .chat-container .chat-send form .input-field .files-input {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.chat-section .chat-container .chat-send form .input-field .files-input img {
+.chat-section .tab-content .chat-container .chat-send form .input-field .files-input img {
   width: 24px;
   height: 24px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.chat-section .chat-container .chat-send form .input-field .files-input input {
+.chat-section .tab-content .chat-container .chat-send form .input-field .files-input input {
   display: none;
 }
-.chat-section .chat-container .chat-send form button {
+.chat-section .tab-content .chat-container .chat-send form button {
   border: none;
   background: none;
   outline: none;
@@ -2643,7 +2659,7 @@ footer .border-top {
   justify-content: center;
   align-items: center;
 }
-.chat-section .chat-container .chat-send form button img {
+.chat-section .tab-content .chat-container .chat-send form button img {
   width: 20px;
   height: 20px;
   -o-object-fit: contain;
