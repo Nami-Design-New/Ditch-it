@@ -2374,7 +2374,8 @@ footer .border-top {
 /* Chat Section */
 .chat-section {
   padding: 24px 0;
-  height: 80dvh;
+  height: 80vh;
+  min-height: 800px;
   display: flex;
   gap: 16px;
 }
@@ -2527,7 +2528,8 @@ footer .border-top {
 }
 @media screen and (max-width: 768px) {
   .chat-section .tab-content .chat-container {
-    max-height: calc(80dvh - 100px);
+    max-height: calc(80vh - 100px);
+    min-height: 700px;
   }
 }
 .chat-section .tab-content .chat-container .chat-head {

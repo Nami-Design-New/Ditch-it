@@ -2318,7 +2318,8 @@ footer {
 /* Chat Section */
 .chat-section {
   padding: 24px 0;
-  height: 80dvh;
+  height: 80vh;
+  min-height: 800px;
   display: flex;
   gap: 16px;
   @media (max-width: 768px) {
@@ -2457,7 +2458,8 @@ footer {
       width: 100%;
       height: 100%;
       @media screen and (max-width: 768px) {
-        max-height: calc(80dvh - 100px);
+        max-height: calc(80vh - 100px);
+        min-height: 700px;
       }
       display: flex;
       flex-direction: column;
