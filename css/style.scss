@@ -2796,6 +2796,19 @@ footer {
         }
       }
     }
+    .profileImage.wide .profileImageLabel img{
+      object-fit: cover;
+    }
+    .moreImages{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+      .profileImage span img{
+        width: 20px;
+        height: 20px;
+      }
+    }
     .form-check{
       padding: 0;
       margin: 0;

@@ -2865,6 +2865,20 @@ footer .border-top {
   background-color: var(--darkColor);
   flex-direction: row-reverse;
 }
+.addPostPage .container .profileImage.wide .profileImageLabel img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.addPostPage .container .moreImages {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.addPostPage .container .moreImages .profileImage span img {
+  width: 20px;
+  height: 20px;
+}
 .addPostPage .container .form-check {
   padding: 0;
   margin: 0;
