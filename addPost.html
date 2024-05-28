@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
@@ -18,6 +19,7 @@
     <!-- Custom style  -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
     <!-- ================ Header ================= -->
     <header>
@@ -107,30 +109,283 @@
                     <div class="progress-bar-fill"></div>
                 </div>
                 <form id="wizard-form">
-                    <div id="form-wizard">
-                        <div class="step" id="step-1">
-                            <h2>Step 1: Personal Information</h2>
-                            <input class="form-control" type="text" placeholder="Name" name="name">
-                            <input class="form-control" type="email" placeholder="Email" name="email">
-                            <button type="button" class="next">Next</button>
+                    <!-- step -->
+                    <div class="step" id="step-1">
+                        <div class="head">
+                            <h2 class="title">Step 1: <span> Catagories </span> </h2>
+                            <p class="subtitle"> please select the catagory </p>
                         </div>
-                        <div class="step" id="step-2">
-                            <h2>Step 2: Address</h2>
-                            <input class="form-control" type="text" placeholder="Address" name="address" required>
-                            <input class="form-control" type="text" placeholder="City" name="city" required>
-                            <input class="form-control" type="text" placeholder="Postal Code" name="postal_code"
-                                required>
-                            <button type="button" class="prev">Previous</button>
-                            <button type="button" class="next">Next</button>
+                        <!-- choose -->
+                        <div class="choose">
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                    checked>
+                                <label class="btn btn-outline-dark" for="btnradio1">
+                                    <img src="img/categories/icon (1).svg" alt="">
+                                    Mobile & Tablets
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio2">
+                                    <img src="img/categories/icon (2).svg" alt="">
+                                    Vehicles
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio3">
+                                    <img src="img/categories/icon (3).svg" alt="">
+                                    Properties
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio4">
+                                    <img src="img/categories/icon (4).svg" alt="">
+                                    Jobs
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio5">
+                                    <img src="img/categories/icon (5).svg" alt="">
+                                    Kids & Babies
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio6">
+                                    <img src="img/categories/icon (6).svg" alt="">
+                                    Hoppies
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio7">
+                                    <img src="img/categories/icon (7).svg" alt="">
+                                    Pets
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio8">
+                                    <img src="img/categories/icon (8).svg" alt="">
+                                    Furniture & Decor
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio9">
+                                    <img src="img/categories/icon (9).svg" alt="">
+                                    Fashion & Beauty
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio10"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio10">
+                                    <img src="img/categories/icon (10).svg" alt="">
+                                    Electronics & Appliances
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio11"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio11">
+                                    <img src="img/categories/icon (11).svg" alt="">
+                                    Businesses & Industrial
+                                </label>
+                            </div>
+                            <!-- category -->
+                            <div class="category">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio12"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-dark" for="btnradio12">
+                                    <img src="img/categories/icon (12).svg" alt="">
+                                    Services
+                                </label>
+                            </div>
                         </div>
-                        <div class="step" id="step-3">
-                            <h2>Step 3: Payment Information</h2>
-                            <input class="form-control" type="text" placeholder="Credit Card Number" name="card_number"
-                                required>
-                            <input class="form-control" type="text" placeholder="Expiry Date" name="expiry_date"
-                                required>
-                            <input class="form-control" type="text" placeholder="CVV" name="cvv" required>
-                            <button type="button" class="prev">Previous</button>
+                        <!-- form buttons -->
+                        <div class="formButtons">
+                            <button type="button" class="next">Next <img src="img/icons/arrow.svg" alt=""> </button>
+                        </div>
+                    </div>
+                    <!-- step -->
+                    <div class="step" id="step-2">
+                        <div class="head">
+                            <h2 class="title">Step 2: <span> Main Details </span> </h2>
+                            <p class="subtitle"> please enter the main details </p>
+                        </div>
+                        <!-- form inputs -->
+                        <div class="formInputs">
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="title"> Title </label>
+                                <input type="text" class="form-control" id="title" placeholder="Title" required>
+                            </div>
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="description"> Description </label>
+                                <textarea name="description" id="description" rows="5" class="form-control"
+                                    placeholder="Description"></textarea>
+                            </div>
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="brand"> Brand </label>
+                                <select name="brand" id="brand" class="form-select" required>
+                                    <option value=""> Brand </option>
+                                    <option value="1"> Brand 1 </option>
+                                    <option value="2"> Brand 2 </option>
+                                    <option value="3"> Brand 3 </option>
+                                    <option value="4"> Brand 4 </option>
+                                    <option value="5"> Brand 5 </option>
+                                    <option value="6"> Brand 6 </option>
+                                    <option value="7"> Brand 7 </option>
+                                    <option value="8"> Brand 8 </option>
+                                    <option value="9"> Brand 9 </option>
+                                    <option value="10"> Brand 10 </option>
+                                    <option value="11"> Brand 11 </option>
+                                </select>
+                            </div>
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="modal"> Model </label>
+                                <select name="modal" id="modal" class="form-select" required>
+                                    <option value=""> Model </option>
+                                    <option value="1"> Model 1 </option>
+                                    <option value="2"> Model 2 </option>
+                                    <option value="3"> Model 3 </option>
+                                    <option value="4"> Model 4 </option>
+                                    <option value="5"> Model 5 </option>
+                                    <option value="6"> Model 6 </option>
+                                    <option value="7"> Model 7 </option>
+                                    <option value="8"> Model 8 </option>
+                                </select>
+                            </div>
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="ZIP code"> ZIP code </label>
+                                <input type="text" class="form-control" id="ZIP code" placeholder="ZIP code" required>
+                            </div>
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="location"> Location </label>
+                                <input type="text" class="form-control" name="" id="location" placeholder="Location"
+                                    oninput="geocodeAddress()">
+                                <div id="mapView"></div>
+                            </div>
+                        </div>
+                        <!-- form buttons -->
+                        <div class="formButtons">
+                            <button type="button" class="prev">Previous <img src="img/icons/arrow.svg" alt="">
+                            </button>
+                            <button type="button" class="next">Next <img src="img/icons/arrow.svg" alt=""> </button>
+                        </div>
+                    </div>
+                    <!-- step -->
+                    <div class="step" id="step-3">
+                        <div class="head">
+                            <h2 class="title">Step 3: <span> More Details </span> </h2>
+                            <p class="subtitle"> please enter the more details </p>
+                        </div>
+                        <!-- form inputs -->
+                        <div class="formInputs">
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="Condition"> Condition </label>
+                                <select name="condition" id="condition" class="form-select" required>
+                                    <option value="0"> new </option>
+                                    <option value="1"> used </option>
+                                </select>
+                            </div>
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="Ad type"> Ad type </label>
+                                <select name="ad_type" id="ad_type" class="form-select" required>
+                                    <option value="0"> type 1 </option>
+                                    <option value="1"> type 2 </option>
+                                </select>
+                            </div>
+                            <!-- Extra Features -->
+                            <div class="formGroup extraFeature">
+                                <label> Extra Features </label>
+                                <div class="feature">
+                                    <input type="text" class="form-control" placeholder="write here">
+                                    <button type="button" class="add"><img src="img/icons/plus.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- form buttons -->
+                        <div class="formButtons">
+                            <button type="button" class="prev">Previous <img src="img/icons/arrow.svg" alt="">
+                            </button>
+                            <button type="button" class="next">Next <img src="img/icons/arrow.svg" alt=""> </button>
+                        </div>
+                    </div>
+                    <!-- step -->
+                    <div class="step" id="step-4">
+                        <div class="head">
+                            <h2 class="title">Step 4: <span> price </span> </h2>
+                            <p class="subtitle"> please enter the price </p>
+                        </div>
+                        <!-- form inputs -->
+                        <div class="formInputs">
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="price"> Price </label>
+                                <div class="input-group">
+                                    <span class="input-group-text"> $ </span>
+                                    <input type="text" class="form-control" placeholder="00" id="price">
+                                </div>
+                            </div>
+                            <!-- form check -->
+                            <div class="form-check">
+                                <input type="checkbox" value="" id="FirmPrice " />
+                                <label class="form-check-label fw-normal" for="FirmPrice "> Firm price </label>
+                            </div>
+                            <!-- form check -->
+                            <div class="form-check">
+                                <input type="checkbox" value="" id="VitualTour" />
+                                <label class="form-check-label fw-normal" for="VitualTour"> Vitual tour </label>
+                            </div>
+                            <!-- form group -->
+                            <div class="formGroup">
+                                <label for="DeliveryMethods "> Delivery methods </label>
+                                <div class="form-check">
+                                    <input type="radio" name="methods" id="LocalShipping" />
+                                    <label class="form-check-label fw-normal" for="LocalShipping"> Local + Shipping
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" name="methods" id="Local" />
+                                    <label class="form-check-label fw-normal" for="Local"> Local </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" name="methods" id="Shipping" />
+                                    <label class="form-check-label fw-normal" for="Shipping"> Shipping </label>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!-- form buttons -->
+                        <div class="formButtons">
+                            <button type="button" class="prev">Previous <img src="img/icons/arrow.svg" alt="">
+                            </button>
                             <button type="submit" class="submit">Submit</button>
                         </div>
                     </div>
@@ -223,6 +478,7 @@
     <!-- main -->
     <script src="js/main.js"></script>
     <script src="js/custom.js"></script>
+    <!-- Wizard -->
     <script>
         $(document).ready(function () {
             var currentStep = 1;
@@ -270,5 +526,249 @@
             }
         });
     </script>
+    <!-- Map -->
+    <script>
+        let map;
+        let marker;
+        let geocoder;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('mapView'), {
+                zoom: 14,
+                mapTypeControl: false,
+                streetViewControl: false,
+                // styles: [
+                //   {
+                //     "elementType": "geometry",
+                //     "stylers": [
+                //       {
+                //         "color": "#f5f5f5"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "elementType": "labels.icon",
+                //     "stylers": [
+                //       {
+                //         "visibility": "off"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "elementType": "labels.text.fill",
+                //     "stylers": [
+                //       {
+                //         "color": "#616161"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "elementType": "labels.text.stroke",
+                //     "stylers": [
+                //       {
+                //         "color": "#f5f5f5"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "administrative.land_parcel",
+                //     "elementType": "labels.text.fill",
+                //     "stylers": [
+                //       {
+                //         "color": "#bdbdbd"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "poi",
+                //     "elementType": "geometry",
+                //     "stylers": [
+                //       {
+                //         "color": "#eeeeee"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "poi",
+                //     "elementType": "labels.text.fill",
+                //     "stylers": [
+                //       {
+                //         "color": "#757575"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "poi.park",
+                //     "elementType": "geometry",
+                //     "stylers": [
+                //       {
+                //         "color": "#e5e5e5"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "poi.park",
+                //     "elementType": "labels.text.fill",
+                //     "stylers": [
+                //       {
+                //         "color": "#9e9e9e"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "road",
+                //     "elementType": "geometry",
+                //     "stylers": [
+                //       {
+                //         "color": "#ffffff"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "road.arterial",
+                //     "elementType": "labels.text.fill",
+                //     "stylers": [
+                //       {
+                //         "color": "#757575"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "road.highway",
+                //     "elementType": "geometry",
+                //     "stylers": [
+                //       {
+                //         "color": "#dadada"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "road.highway",
+                //     "elementType": "labels.text.fill",
+                //     "stylers": [
+                //       {
+                //         "color": "#616161"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "road.local",
+                //     "elementType": "labels.text.fill",
+                //     "stylers": [
+                //       {
+                //         "color": "#9e9e9e"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "transit.line",
+                //     "elementType": "geometry",
+                //     "stylers": [
+                //       {
+                //         "color": "#e5e5e5"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "transit.station",
+                //     "elementType": "geometry",
+                //     "stylers": [
+                //       {
+                //         "color": "#eeeeee"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "water",
+                //     "elementType": "geometry",
+                //     "stylers": [
+                //       {
+                //         "color": "#c9c9c9"
+                //       }
+                //     ]
+                //   },
+                //   {
+                //     "featureType": "water",
+                //     "elementType": "labels.text.fill",
+                //     "stylers": [
+                //       {
+                //         "color": "#9e9e9e"
+                //       }
+                //     ]
+                //   }
+                // ],
+            });
+            geocoder = new google.maps.Geocoder();
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: true
+            });
+            marker.addListener('dragend', function () {
+                geocodeLatLng(marker.getPosition());
+            });
+            // Get current location and set it as the initial center
+            getGeoLocation();
+        }
+        function getGeoLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    const pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    map.setCenter(pos);
+                    marker.setPosition(pos);
+                    geocodeLatLng(pos); // Reverse geocode the current position
+                }, function () {
+                    console.log('Geolocation service failed. Using default location.');
+                });
+            } else {
+                console.log('Browser does not support Geolocation. Using default location.');
+            }
+        }
+        function geocodeAddress() {
+            const address = document.getElementById('location').value;
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status === 'OK' && results[0]) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                } else {
+                    console.log('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+        function geocodeLatLng(latlng) {
+            geocoder.geocode({ 'location': latlng }, function (results, status) {
+                if (status === 'OK' && results[0]) {
+                    document.getElementById('location').value = results[0].formatted_address;
+                } else {
+                    console.log('Geocoder failed due to: ' + status);
+                }
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&language=en&callback=initMap" async
+        defer></script>
+    <!-- Add new feature -->
+    <script>
+        $(document).ready(function () {
+            $(document).on('click', '.add', function () {
+                var lastInputVal = $('.extraFeature .feature').last().find('input').val();
+                if (lastInputVal.trim() === "") {
+                    alert("Input cannot be empty. Fill in the current field so you can add more.");
+                    return;
+                }
+                $('.extraFeature').append(`
+                    <div class="feature">
+                        <input type="text" class="form-control" placeholder="write here">
+                        <button type="button" class="remove"><img src="img/icons/trash.svg" alt=""></button>
+                    </div>
+                `);
+            });
+            $(document).on('click', '.remove', function () {
+                $(this).closest('.feature').remove();
+            });
+        });
+    </script>
 </body>
+
 </html>

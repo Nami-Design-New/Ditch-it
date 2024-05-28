@@ -102,13 +102,6 @@ img {
 .btn:focus {
   box-shadow: none;
 }
-.btn-check:checked + .btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check) + .btn:active {
-  border-color: transparent;
-}
 input {
   accent-color: var(--mainColor) !important;
 }
@@ -152,6 +145,7 @@ button {
 .form-select,
 .form-control {
   min-height: 48px;
+  font-size: 14px;
   &:focus {
     box-shadow: none;
   }
@@ -639,6 +633,9 @@ header {
               opacity: 1;
             }
           }
+          &.show {
+            display: flex;
+          }
         }
         .dropdown-item {
           color: var(--darkColor);
@@ -665,6 +662,7 @@ header {
             padding: 8px;
             gap: 4px;
             flex-direction: row;
+            border-radius: 12px;
             p {
               padding: 8px;
               color: var(--grayColor);
@@ -682,17 +680,17 @@ header {
               gap: 8px;
               justify-content: center;
               align-items: center;
-              img{
+              img {
                 width: 40px;
                 height: 40px;
                 object-fit: contain;
                 transition: var(--transition);
               }
-              &:hover{
+              &:hover {
                 background-color: var(--mainColor);
                 color: var(--whiteColor);
                 border-color: var(--mainColor);
-                img{
+                img {
                   filter: brightness(0) invert(1);
                 }
               }
@@ -2030,6 +2028,14 @@ footer {
 .accountForm {
   padding: 40px 0;
 }
+#mapView {
+  height: 250px;
+  border-radius: 16px;
+  .gm-style-cc {
+    display: none;
+  }
+  overflow: hidden;
+}
 .cardForm {
   isolation: isolate;
   padding: 30px;
@@ -2042,14 +2048,7 @@ footer {
   @media (max-width: 768px) {
     padding: 30px 10px;
   }
-  #mapView {
-    height: 250px;
-    border-radius: 16px;
-    .gm-style-cc {
-      display: none;
-    }
-    overflow: hidden;
-  }
+
   .loginImg {
     width: 100%;
     max-height: 200px;
@@ -2673,17 +2672,141 @@ footer {
   border: 1px solid red;
 }
 
-.progress-bar {
-  width: 100%;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
+.addPostPage {
+  padding: 20px 0;
+  .container {
+    width: min(100% - 24px, 1000px);
+    margin-inline: auto;
+    .progress-bar {
+      width: 100%;
+      background-color: #d9d9d9;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
 
-.progress-bar-fill {
-  height: 20px;
-  background-color: #76c7c0;
-  width: 0%;
-  transition: width 0.3s;
+      .progress-bar-fill {
+        height: 8px;
+        background-color: var(--mainColor);
+        width: 0%;
+        transition: var(--transition);
+      }
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .head {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      .title {
+        span {
+          color: var(--mainColor);
+          font-size: unset;
+          font-weight: bold;
+          text-transform: capitalize;
+        }
+      }
+      .subtitle {
+        color: var(--grayColor);
+      }
+    }
+    .choose {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      .category {
+        flex: 1;
+        min-width: 250px;
+        label {
+          text-align: start;
+          padding: 16px 24px;
+          border-radius: 12px;
+          --bs-btn-border-color: var(--lightBorderColor);
+          --bs-btn-active-bg: var(--mainColor);
+          --bs-btn-active-border-color: var(--mainColor);
+          transition: var(--transition);
+          font-size: 14px;
+          img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: var(--transition);
+          }
+        }
+        .btn-check:checked + .btn,
+        .btn.active {
+          color: var(--whiteColor);
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+    .formInputs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .formGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      label {
+        font-weight: bold;
+      }
+    }
+    .feature {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .formButtons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      button {
+        border-radius: 12px;
+        color: var(--whiteColor);
+        padding: 12px 24px;
+        background: var(--mainColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        img {
+          width: 12px;
+          height: 12px;
+          object-fit: contain;
+          filter: brightness(0) invert(1);
+        }
+
+        &.next {
+          img {
+            transform: scaleX(-1);
+          }
+        }
+        &.prev {
+          margin-right: auto;
+          background-color: var(--darkColor);
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    .form-check{
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      input{
+        height: 20px;
+        width: 20px;
+        margin: 0; 
+        
+      }
+    }
+  }
 }

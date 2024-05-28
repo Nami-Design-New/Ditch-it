@@ -114,14 +114,6 @@ img {
   box-shadow: none;
 }
 
-.btn-check:checked + .btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check) + .btn:active {
-  border-color: transparent;
-}
-
 input {
   accent-color: var(--mainColor) !important;
 }
@@ -184,6 +176,7 @@ button {
 .form-select,
 .form-control {
   min-height: 48px;
+  font-size: 14px;
 }
 .form-select:focus,
 .form-control:focus {
@@ -682,6 +675,9 @@ header .inner .moreActions .dropdown .dropdown-menu {
     opacity: 1;
   }
 }
+header .inner .moreActions .dropdown .dropdown-menu.show {
+  display: flex;
+}
 header .inner .moreActions .dropdown .dropdown-item {
   color: var(--darkColor);
   padding: 8px 16px;
@@ -704,6 +700,7 @@ header .inner .moreActions .dropdown:has(.text) .dropdown-menu {
   padding: 8px;
   gap: 4px;
   flex-direction: row;
+  border-radius: 12px;
 }
 header .inner .moreActions .dropdown:has(.text) .dropdown-menu p {
   padding: 8px;
@@ -2073,6 +2070,15 @@ footer .border-top {
   padding: 40px 0;
 }
 
+#mapView {
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+#mapView .gm-style-cc {
+  display: none;
+}
+
 .cardForm {
   isolation: isolate;
   padding: 30px;
@@ -2087,14 +2093,6 @@ footer .border-top {
   .cardForm {
     padding: 30px 10px;
   }
-}
-.cardForm #mapView {
-  height: 250px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-.cardForm #mapView .gm-style-cc {
-  display: none;
 }
 .cardForm .loginImg {
   width: 100%;
@@ -2745,17 +2743,136 @@ footer .border-top {
   border: 1px solid red;
 }
 
-.progress-bar {
+.addPostPage {
+  padding: 20px 0;
+}
+.addPostPage .container {
+  width: min(100% - 24px, 1000px);
+  margin-inline: auto;
+}
+.addPostPage .container .progress-bar {
   width: 100%;
-  background-color: #e0e0e0;
-  border-radius: 5px;
+  background-color: #d9d9d9;
+  border-radius: 16px;
   overflow: hidden;
   margin-bottom: 20px;
 }
-
-.progress-bar-fill {
-  height: 20px;
-  background-color: #76c7c0;
+.addPostPage .container .progress-bar .progress-bar-fill {
+  height: 8px;
+  background-color: var(--mainColor);
   width: 0%;
-  transition: width 0.3s;
+  transition: var(--transition);
+}
+.addPostPage .container .step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.addPostPage .container .head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.addPostPage .container .head .title span {
+  color: var(--mainColor);
+  font-size: unset;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.addPostPage .container .head .subtitle {
+  color: var(--grayColor);
+}
+.addPostPage .container .choose {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.addPostPage .container .choose .category {
+  flex: 1;
+  min-width: 250px;
+}
+.addPostPage .container .choose .category label {
+  text-align: start;
+  padding: 16px 24px;
+  border-radius: 12px;
+  --bs-btn-border-color: var(--lightBorderColor);
+  --bs-btn-active-bg: var(--mainColor);
+  --bs-btn-active-border-color: var(--mainColor);
+  transition: var(--transition);
+  font-size: 14px;
+}
+.addPostPage .container .choose .category label img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: var(--transition);
+}
+.addPostPage .container .choose .category .btn-check:checked + .btn,
+.addPostPage .container .choose .category .btn.active {
+  color: var(--whiteColor);
+}
+.addPostPage .container .choose .category .btn-check:checked + .btn img,
+.addPostPage .container .choose .category .btn.active img {
+  filter: brightness(0) invert(1);
+}
+.addPostPage .container .formInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.addPostPage .container .formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.addPostPage .container .formGroup label {
+  font-weight: bold;
+}
+.addPostPage .container .feature {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.addPostPage .container .formButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.addPostPage .container .formButtons button {
+  border-radius: 12px;
+  color: var(--whiteColor);
+  padding: 12px 24px;
+  background: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.addPostPage .container .formButtons button img {
+  width: 12px;
+  height: 12px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.addPostPage .container .formButtons button.next img {
+  transform: scaleX(-1);
+}
+.addPostPage .container .formButtons button.prev {
+  margin-right: auto;
+  background-color: var(--darkColor);
+  flex-direction: row-reverse;
+}
+.addPostPage .container .form-check {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.addPostPage .container .form-check input {
+  height: 20px;
+  width: 20px;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
