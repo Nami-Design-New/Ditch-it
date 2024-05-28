@@ -2848,6 +2848,7 @@ footer .border-top {
   justify-content: center;
   align-items: center;
   gap: 4px;
+  text-transform: capitalize;
 }
 .addPostPage .container .formButtons button img {
   width: 12px;
