@@ -48,16 +48,32 @@
         </ul>
       </nav>
       <!-- Actions -->
-      <div class="moreActions">
-        <a href="addPost.html" class="link" data-bs-toggle="tooltip" title=" add post "> <img src="img/icons/plus.svg" alt="">
-        </a>
-        <div class="dropdown">
-          <button class=" dropdown-toggle link" type="button" id="myAccount" data-bs-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <img src="img/icons/user.svg" alt="">
-          </button>
+                  <div class="moreActions">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle link text" type="button" id="addPost" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="img/icons/plus.svg" alt="">
+                        Add Post
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="addPost">
+                        <p> what do you want ? </p>
+                        <a href="addPost.html" class="dropdown-item">
+                            <img src="img/icons/wanted.svg" alt="">
+                            Wanted
+                        </a>
+                        <a href="addPost.html" class="dropdown-item">
+                            <img src="img/icons/sell.svg" alt="">
+                            Sell
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class=" dropdown-toggle link" type="button" id="myAccount" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="img/icons/user.svg" alt="">
+                    </button>
                     <div class="dropdown-menu" aria-labelledby="myAccount">
-                             <a href="login.html" class="dropdown-item"> login </a>
+                        <a href="login.html" class="dropdown-item"> login </a>
                         <a href="myPosts.html" class="dropdown-item"> my posts </a>
                         <a href="notifications.html" class="dropdown-item"> notifications </a>
                         <a href="bought.html" class="dropdown-item"> Bought </a>
@@ -66,9 +82,8 @@
                         <a href="editProfile.html" class="dropdown-item"> edit Profile </a>
                         <a href="login.html" class="dropdown-item"> logout </a>
                     </div>
-        </div>
-        <a href="#!" class="link" data-bs-toggle="tooltip" title=" language "> ع </a>
-      </div>
+                </div>
+            </div>
     </section>
   </header>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->

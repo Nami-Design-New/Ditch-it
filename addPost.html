@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
@@ -19,7 +18,6 @@
     <!-- Custom style  -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
     <!-- ================ Header ================= -->
     <header>
@@ -51,9 +49,24 @@
             </nav>
             <!-- Actions -->
             <div class="moreActions">
-                <a href="addPost.html" class="link" data-bs-toggle="tooltip" title=" add post "> <img src="img/icons/plus.svg"
-                        alt="">
-                </a>
+                <div class="dropdown">
+                    <button class=" dropdown-toggle link text" type="button" id="addPost" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="img/icons/plus.svg" alt="">
+                        Add Post
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="addPost">
+                        <p> what do you want ? </p>
+                        <a href="addPost.html" class="dropdown-item">
+                            <img src="img/icons/wanted.svg" alt="">
+                            Wanted
+                        </a>
+                        <a href="addPost.html" class="dropdown-item">
+                            <img src="img/icons/sell.svg" alt="">
+                            Sell
+                        </a>
+                    </div>
+                </div>
                 <div class="dropdown">
                     <button class=" dropdown-toggle link" type="button" id="myAccount" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -70,7 +83,6 @@
                         <a href="login.html" class="dropdown-item"> logout </a>
                     </div>
                 </div>
-                <a href="#!" class="link" data-bs-toggle="tooltip" title=" language "> ع </a>
             </div>
         </section>
     </header>
@@ -88,8 +100,43 @@
                 <!-- <h2> add Post </h2> -->
             </div>
         </section>
-  
-        
+        <!-- add Post -->
+        <section class="addPostPage">
+            <div class="container">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
+                </div>
+                <form id="wizard-form">
+                    <div id="form-wizard">
+                        <div class="step" id="step-1">
+                            <h2>Step 1: Personal Information</h2>
+                            <input class="form-control" type="text" placeholder="Name" name="name">
+                            <input class="form-control" type="email" placeholder="Email" name="email">
+                            <button type="button" class="next">Next</button>
+                        </div>
+                        <div class="step" id="step-2">
+                            <h2>Step 2: Address</h2>
+                            <input class="form-control" type="text" placeholder="Address" name="address" required>
+                            <input class="form-control" type="text" placeholder="City" name="city" required>
+                            <input class="form-control" type="text" placeholder="Postal Code" name="postal_code"
+                                required>
+                            <button type="button" class="prev">Previous</button>
+                            <button type="button" class="next">Next</button>
+                        </div>
+                        <div class="step" id="step-3">
+                            <h2>Step 3: Payment Information</h2>
+                            <input class="form-control" type="text" placeholder="Credit Card Number" name="card_number"
+                                required>
+                            <input class="form-control" type="text" placeholder="Expiry Date" name="expiry_date"
+                                required>
+                            <input class="form-control" type="text" placeholder="CVV" name="cvv" required>
+                            <button type="button" class="prev">Previous</button>
+                            <button type="submit" class="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </content>
     <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
     <!--((((((((((((((((( / content )))))))))))))))))))-->
@@ -176,6 +223,52 @@
     <!-- main -->
     <script src="js/main.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            var currentStep = 1;
+            var totalSteps = $('.step').length;
+            $('.step').hide();
+            $('#step-' + currentStep).show();
+            updateProgressBar();
+            $('.next').click(function () {
+                if (validateStep(currentStep)) {
+                    $('#step-' + currentStep).hide();
+                    currentStep++;
+                    $('#step-' + currentStep).show();
+                    updateProgressBar();
+                }
+            });
+            $('.prev').click(function () {
+                $('#step-' + currentStep).hide();
+                currentStep--;
+                $('#step-' + currentStep).show();
+                updateProgressBar();
+            });
+            // $('.submit').click(function () {
+            //     if (validateStep(currentStep)) {
+            //         // Here you can collect form data and submit it
+            //         alert('Form submitted successfully!');
+            //         // For demonstration purposes, let's log form data to console
+            //         console.log($('#wizard-form').serialize());
+            //     }
+            // });
+            function validateStep(step) {
+                var isValid = true;
+                $('#step-' + step + ' input[required]').each(function () {
+                    if ($(this).val() === '') {
+                        isValid = false;
+                        $(this).addClass('error');
+                    } else {
+                        $(this).removeClass('error');
+                    }
+                });
+                return isValid;
+            }
+            function updateProgressBar() {
+                var progress = (currentStep - 1) / (totalSteps - 1) * 100;
+                $('.progress-bar-fill').css('width', progress + '%');
+            }
+        });
+    </script>
 </body>
-
 </html>

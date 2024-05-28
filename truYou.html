@@ -51,9 +51,24 @@
             </nav>
             <!-- Actions -->
             <div class="moreActions">
-                <a href="addPost.html" class="link" data-bs-toggle="tooltip" title=" add post "> <img src="img/icons/plus.svg"
-                        alt="">
-                </a>
+                <div class="dropdown">
+                    <button class=" dropdown-toggle link text" type="button" id="addPost" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="img/icons/plus.svg" alt="">
+                        Add Post
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="addPost">
+                        <p> what do you want ? </p>
+                        <a href="addPost.html" class="dropdown-item">
+                            <img src="img/icons/wanted.svg" alt="">
+                            Wanted
+                        </a>
+                        <a href="addPost.html" class="dropdown-item">
+                            <img src="img/icons/sell.svg" alt="">
+                            Sell
+                        </a>
+                    </div>
+                </div>
                 <div class="dropdown">
                     <button class=" dropdown-toggle link" type="button" id="myAccount" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -70,7 +85,6 @@
                         <a href="login.html" class="dropdown-item"> logout </a>
                     </div>
                 </div>
-                <a href="#!" class="link" data-bs-toggle="tooltip" title=" language "> ع </a>
             </div>
         </section>
     </header>
@@ -116,15 +130,10 @@
                     </div>
                     <!-- content -->
                     <div class=" col-md-7 col-lg-8 col-xl-9 p-2 profileContent">
-
-                      
-
                         <form class=" p-2 p-md-5" data-aos="fade-up">
-
                             <div class="topImg">
                                 <img src="img/verify.svg" alt="">
                                 <h5> Please Verify your account by uploading your ID </h5>
-    
                             </div>
                             <div class="profileImage wide">
                                 <input type="file" id="profileImageInput" accept="image/*" />
@@ -133,11 +142,8 @@
                                 </label>
                                 <span><img src="img/icons/plus.svg" alt=""></span>
                             </div>
-
                             <button type="submit" class="customBtn mt-4"> Submit </button>
                         </form>
-
-
                     </div>
                 </div>
             </div>
