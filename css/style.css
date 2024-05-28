@@ -1195,15 +1195,20 @@ footer .border-top {
      object-fit: contain;
 }
 .item .status {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   color: var(--darkColor);
   width: -moz-fit-content;
   width: fit-content;
   padding: 4px 12px;
   border-radius: 100px;
+  border: 1px solid var(--whiteColor);
 }
 .item .status.avilable {
-  background-color: var(--mainColor10);
-  color: var(--mainColor);
+  background-color: var(--whiteColor);
+  color: var(--darkColor);
+  border: 1px solid var(--darkColor);
 }
 .item .status.promoted {
   background-color: var(--mainColor);
@@ -2376,7 +2381,6 @@ footer .border-top {
 @media (max-width: 768px) {
   .chat-section {
     flex-direction: column;
-    height: auto;
   }
 }
 .chat-section .side-menu {
@@ -2523,7 +2527,7 @@ footer .border-top {
 }
 @media screen and (max-width: 768px) {
   .chat-section .tab-content .chat-container {
-    max-height: calc(90dvh - 0px);
+    max-height: calc(80dvh - 100px);
   }
 }
 .chat-section .tab-content .chat-container .chat-head {
@@ -2895,4 +2899,42 @@ footer .border-top {
   height: 20px;
   width: 20px;
   margin: 0;
+}
+
+.modal .modal-content {
+  border-radius: 16px;
+  padding: 16px;
+}
+.modal .modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+}
+.modal .modalHeader .modalTitle {
+  font-weight: bold;
+}
+.modal .modalBody {
+  padding: 16px;
+}
+.modal .modalBody .text span {
+  color: var(--mainColor);
+  font-size: unset;
+  font-weight: bold;
+}
+.modal .modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  padding-top: 16px;
+  margin-top: 8px;
+  border-top: 1px solid var(--lightBorderColor);
+}
+.modal .modalFooter button {
+  font-size: 14px;
+  height: 44px;
+  border-radius: 12px;
+  margin: unset;
 }/*# sourceMappingURL=style.css.map */

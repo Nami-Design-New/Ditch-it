@@ -1153,13 +1153,18 @@ footer {
     }
   }
   .status {
+    position: absolute;
+    top: 8px;
+    right: 8px;
     color: var(--darkColor);
     width: fit-content;
     padding: 4px 12px;
     border-radius: 100px;
+    border: 1px solid var(--whiteColor);
     &.avilable {
-      background-color: var(--mainColor10);
-      color: var(--mainColor);
+      background-color: var(--whiteColor);
+      color: var(--darkColor);
+      border: 1px solid var(--darkColor);
     }
     &.promoted {
       background-color: var(--mainColor);
@@ -2318,7 +2323,7 @@ footer {
   gap: 16px;
   @media (max-width: 768px) {
     flex-direction: column;
-    height: auto;
+    // height: auto;
   }
   .side-menu {
     padding: 12px;
@@ -2452,7 +2457,7 @@ footer {
       width: 100%;
       height: 100%;
       @media screen and (max-width: 768px) {
-        max-height: calc(90dvh - 0px);
+        max-height: calc(80dvh - 100px);
       }
       display: flex;
       flex-direction: column;
@@ -2796,36 +2801,80 @@ footer {
         }
       }
     }
-    .profileImage.wide .profileImageLabel img{
+    .profileImage.wide .profileImageLabel img {
       object-fit: cover;
     }
-    .moreImages{
+    .moreImages {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
       margin-top: 4px;
-      .profileImage{
+      .profileImage {
         flex: 1;
         min-width: 150px;
         max-width: 250px;
       }
-      .profileImage span img{
+      .profileImage span img {
         width: 20px;
         height: 20px;
       }
     }
-    .form-check{
+    .form-check {
       padding: 0;
       margin: 0;
       display: flex;
       align-items: center;
       gap: 8px;
-      input{
+      input {
         height: 20px;
         width: 20px;
-        margin: 0; 
-
+        margin: 0;
       }
     }
   }
+}
+
+.modal {
+  .modal-content {
+    border-radius: 16px;
+    padding: 16px;
+  }
+  .modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    .modalTitle {
+      font-weight: bold;
+    }
+   
+  }
+  .modalBody{
+    padding: 16px;
+    .text{
+      span{
+        color: var(--mainColor);
+        font-size: unset;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .modalFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    padding-top: 16px;
+    margin-top: 8px;
+    border-top: 1px solid var(--lightBorderColor);
+    button{
+      font-size: 14px;
+      height: 44px;
+      border-radius: 12px;
+      margin: unset;
+    }
+  }
+ 
 }
