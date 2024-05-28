@@ -2592,7 +2592,110 @@ footer {
       }
       .chat-send {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
         padding: 8px;
+        .moreActions {
+          display: flex;
+          background-color: var(--whiteColor);
+          border-radius: 12px;
+          padding: 8px;
+          text-align: center;
+          position: relative;
+          gap: 8px;
+          .line {
+            display: block;
+            width: 1px;
+            height: 100%;
+            background-color: var(--lightBorderColor);
+          }
+          button {
+            font-size: 14px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: none !important;
+            border-radius: none;
+            img {
+              width: 20px;
+              height: 20px;
+              object-fit: contain;
+            }
+          }
+          .upSlide {
+            position: absolute;
+            // bottom: calc(100% + 8px);
+            bottom: 0 ;
+            left: 0;
+            width: 100%;
+            background-color: var(--whiteColor);
+            border: 1px solid var(--lightBorderColor);
+            border-radius: 12px;
+            padding: 12px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            // &::before{
+            //   content: "";
+            //   width: 150px;
+            //   height: 6px;
+            //   background-color: var(--lightBorderColor);
+            //   display: block;
+            //   border-radius: 100px;
+            //   margin: 8px auto ;
+            // }
+            .question {
+              padding: 8px;
+              background-color: var(--mainColor10);
+              border-radius: 8px;
+              text-wrap: balance;
+            }
+            .slideHead {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              justify-content: space-between;
+              padding: 8px;
+              img {
+                width: 12px;
+                height: 12px;
+                object-fit: contain;
+              }
+              .close {
+                margin: unset;
+                padding: 8px;
+                flex: unset;
+                border: 1px solid !important;
+                border-radius: 100px;
+              }
+              .title {
+                color: var(--mainColor);
+                font-weight: bold;
+              }
+            }
+            .makeOfferForm {
+              display: flex;
+              align-items: center;
+              .form-control {
+                flex: 1;
+              }
+              button {
+                height: 48px;
+                width: 48px;
+                flex: unset;
+                img {
+                  min-width: 16px;
+                  height: 16px;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+        }
         form {
           display: flex;
           gap: 8px;
@@ -2848,20 +2951,19 @@ footer {
     .modalTitle {
       font-weight: bold;
     }
-   
   }
-  .modalBody{
+  .modalBody {
     padding: 16px;
-    .text{
-      span{
+    .text {
+      span {
         color: var(--mainColor);
         font-size: unset;
         font-weight: bold;
       }
     }
   }
-  
-  .modalFooter{
+
+  .modalFooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2869,12 +2971,11 @@ footer {
     padding-top: 16px;
     margin-top: 8px;
     border-top: 1px solid var(--lightBorderColor);
-    button{
+    button {
       font-size: 14px;
       height: 44px;
       border-radius: 12px;
       margin: unset;
     }
   }
- 
 }

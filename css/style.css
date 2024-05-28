@@ -2660,7 +2660,103 @@ footer .border-top {
 }
 .chat-section .tab-content .chat-container .chat-send {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   padding: 8px;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions {
+  display: flex;
+  background-color: var(--whiteColor);
+  border-radius: 12px;
+  padding: 8px;
+  text-align: center;
+  position: relative;
+  gap: 8px;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--lightBorderColor);
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions button {
+  font-size: 14px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none !important;
+  border-radius: none;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions button img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--whiteColor);
+  border: 1px solid var(--lightBorderColor);
+  border-radius: 12px;
+  padding: 12px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .question {
+  padding: 8px;
+  background-color: var(--mainColor10);
+  border-radius: 8px;
+  text-wrap: balance;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .slideHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 8px;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .slideHead img {
+  width: 12px;
+  height: 12px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .slideHead .close {
+  margin: unset;
+  padding: 8px;
+  flex: unset;
+  border: 1px solid !important;
+  border-radius: 100px;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .slideHead .title {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .makeOfferForm {
+  display: flex;
+  align-items: center;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .makeOfferForm .form-control {
+  flex: 1;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .makeOfferForm button {
+  height: 48px;
+  width: 48px;
+  flex: unset;
+}
+.chat-section .tab-content .chat-container .chat-send .moreActions .upSlide .makeOfferForm button img {
+  min-width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .chat-section .tab-content .chat-container .chat-send form {
   display: flex;

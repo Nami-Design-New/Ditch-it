@@ -102,6 +102,7 @@
         <!-- <h2> chats </h2> -->
       </div>
     </section>
+    <!-- Chats -->
     <section class="chat-section container">
       <button class="openTaps">
         <img src="img/icons/chats.svg" alt="">
@@ -380,6 +381,33 @@
               </div>
             </div>
             <div class="chat-send">
+              <!-- more actions -->
+              <div class="moreActions">
+                <button class="btn questions"><img src="img/icons/questions.svg" alt=""> Questions </button>
+                <span class="line"></span>
+                <button class="btn makeOffer"><img src="img/icons/makeOffer.svg" alt=""> Make Offer </button>
+                <!-- upSlide -->
+                <div class="upSlide questions">
+                  <div class="slideHead">
+                    <h5 class="title"> Questions </h5>
+                    <button class="close"> <img src="img/icons/close.svg" alt=""> </button>
+                  </div>
+                  <a href="#!" class="question"> Would you consider offers below the listed price? </a>
+                  <a href="#!" class="question"> Can you provide more photos or videos? </a>
+                  <a href="#!" class="question"> Can you schedule a viewing or provide a virtual tour? </a>
+                </div>
+                <!-- upSlide -->
+                <div class="upSlide makeOffer">
+                  <div class="slideHead">
+                    <h5 class="title"> Make Offer </h5>
+                    <button class="close"> <img src="img/icons/close.svg" alt=""> </button>
+                  </div>
+                  <form action="" class="makeOfferForm">
+                    <input type="number" class="form-control" placeholder="New Price" name="" id="">
+                    <button type="submit"> <img src="img/icons/send.svg" alt=""> </button>
+                  </form>
+                </div>
+              </div>
               <form action="" method="post">
                 <div class="input-field">
                   <input type="text" placeholder=" write Here ...">
@@ -440,6 +468,33 @@
               </div>
             </div>
             <div class="chat-send">
+              <!-- more actions -->
+              <div class="moreActions">
+                <button class="btn questions"><img src="img/icons/questions.svg" alt=""> Questions </button>
+                <span class="line"></span>
+                <button class="btn makeOffer"><img src="img/icons/makeOffer.svg" alt=""> Make Offer </button>
+                <!-- upSlide -->
+                <div class="upSlide questions">
+                  <div class="slideHead">
+                    <h5 class="title"> Questions </h5>
+                    <button class="close"> <img src="img/icons/close.svg" alt=""> </button>
+                  </div>
+                  <a href="#!" class="question"> Would you consider offers below the listed price? </a>
+                  <a href="#!" class="question"> Can you provide more photos or videos? </a>
+                  <a href="#!" class="question"> Can you schedule a viewing or provide a virtual tour? </a>
+                </div>
+                <!-- upSlide -->
+                <div class="upSlide makeOffer">
+                  <div class="slideHead">
+                    <h5 class="title"> Make Offer </h5>
+                    <button class="close"> <img src="img/icons/close.svg" alt=""> </button>
+                  </div>
+                  <form action="" class="makeOfferForm">
+                    <input type="number" class="form-control" placeholder="New Price" name="" id="">
+                    <button type="submit"> <img src="img/icons/send.svg" alt=""> </button>
+                  </form>
+                </div>
+              </div>
               <form action="" method="post">
                 <div class="input-field">
                   <input type="text" placeholder=" write Here ...">
@@ -564,6 +619,25 @@
         sideMenu.classList.remove("active");
       })
     })
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.upSlide').hide();
+      $('.btn.questions').on('click', function () {
+        $('.upSlide.questions').slideToggle();
+        $('.upSlide.makeOffer').slideUp();
+      });
+      $('.btn.makeOffer').on('click', function () {
+        $('.upSlide.makeOffer').slideToggle();
+        $('.upSlide.questions').slideUp();
+      });
+      $('.upSlide.questions .close').on('click', function () {
+        $('.upSlide.questions').slideUp();
+      });
+      $('.upSlide.makeOffer .close').on('click', function () {
+        $('.upSlide.makeOffer').slideUp();
+      });
+    });
   </script>
 </body>
 
