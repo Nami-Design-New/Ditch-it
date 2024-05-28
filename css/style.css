@@ -2213,7 +2213,7 @@ footer .border-top {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.profileImage #profileImageInput {
+.profileImage input {
   display: none;
 }
 .profileImage.wide {
@@ -2874,6 +2874,11 @@ footer .border-top {
   gap: 8px;
   flex-wrap: wrap;
   margin-top: 4px;
+}
+.addPostPage .container .moreImages .profileImage {
+  flex: 1;
+  min-width: 150px;
+  max-width: 250px;
 }
 .addPostPage .container .moreImages .profileImage span img {
   width: 20px;
