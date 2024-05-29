@@ -2981,3 +2981,33 @@ footer {
     }
   }
 }
+
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  .spin {
+    animation: spin 1s linear infinite;
+    transform-origin: center;
+    min-width: 24px;
+    height: 24px;
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--mainColor);
+      * {
+        fill: var(--mainColor);
+      }
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

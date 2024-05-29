@@ -3035,4 +3035,33 @@ footer .border-top {
   height: 44px;
   border-radius: 12px;
   margin: unset;
+}
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+}
+.loadMore .spin {
+  animation: spin 1s linear infinite;
+  transform-origin: center;
+  min-width: 24px;
+  height: 24px;
+}
+.loadMore .spin svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--mainColor);
+}
+.loadMore .spin svg * {
+  fill: var(--mainColor);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
