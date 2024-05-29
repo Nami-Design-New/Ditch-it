@@ -3041,7 +3041,7 @@ footer .border-top {
   display: flex;
   justify-content: center;
   gap: 8px;
-  padding: 8px;
+  padding: 20px;
 }
 .loadMore .spin {
   animation: spin 1s linear infinite;
