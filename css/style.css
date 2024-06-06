@@ -3,6 +3,7 @@
   --mainColor: #00a650;
   --mainColor20: #00a65033;
   --mainColor10: #00a6501a;
+  --mainColor11: #3277531a;
   --goldColor: #f4bd4b;
   --whiteColor: #ffffff;
   --darkColor: #1f1f1f;
@@ -2659,6 +2660,13 @@ footer .border-top {
 }
 .chat-section .tab-content .chat-container .inner-container .message.recieved-message .message-content p {
   color: #fff;
+}
+.chat-section .tab-content .chat-container .inner-container .image {
+  background: var(--mainColor11);
+}
+.chat-section .tab-content .chat-container .inner-container .record {
+  background-color: #00a650;
+  padding: 1px 3px;
 }
 .chat-section .tab-content .chat-container .chat-send {
   width: 100%;

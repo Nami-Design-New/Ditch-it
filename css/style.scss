@@ -2,6 +2,8 @@
   --mainColor: #00a650;
   --mainColor20: #00a65033;
   --mainColor10: #00a6501a;
+  --mainColor11: #3277531a;
+
   --goldColor: #f4bd4b;
   --whiteColor: #ffffff;
   --darkColor: #1f1f1f;
@@ -2590,6 +2592,15 @@ footer {
               }
             }
           }
+        }
+        .image{
+          background: var(--mainColor11);
+
+
+        }
+        .record{
+          background-color: #00a650;
+          padding: 1px 3px;
         }
       }
       .chat-send {
