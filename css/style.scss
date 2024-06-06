@@ -2568,6 +2568,13 @@ footer {
             color: var(--grayColor);
             font-size: 12px;
           }
+          video,
+          img{
+            height: 150px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+          }
           &.sent-message {
             justify-content: flex-end;
             .message-content {
@@ -2577,6 +2584,9 @@ footer {
               border-bottom-right-radius: 0;
               color: var(--darkColor);
               position: relative;
+              gap: 8px;
+              display: flex;
+              flex-wrap: wrap;
             }
           }
           &.recieved-message {
@@ -2587,6 +2597,9 @@ footer {
               border-radius: 12px;
               border-bottom-left-radius: 0;
               position: relative;
+              gap: 8px;
+              display: flex;
+              flex-wrap: wrap;
               p {
                 color: #fff;
               }

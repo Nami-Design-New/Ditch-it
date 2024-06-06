@@ -2637,6 +2637,14 @@ footer .border-top {
   color: var(--grayColor);
   font-size: 12px;
 }
+.chat-section .tab-content .chat-container .inner-container .message video,
+.chat-section .tab-content .chat-container .inner-container .message img {
+  height: 150px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
 .chat-section .tab-content .chat-container .inner-container .message.sent-message {
   justify-content: flex-end;
 }
@@ -2647,6 +2655,9 @@ footer .border-top {
   border-bottom-right-radius: 0;
   color: var(--darkColor);
   position: relative;
+  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .chat-section .tab-content .chat-container .inner-container .message.recieved-message {
   justify-content: flex-start;
@@ -2657,6 +2668,9 @@ footer .border-top {
   border-radius: 12px;
   border-bottom-left-radius: 0;
   position: relative;
+  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .chat-section .tab-content .chat-container .inner-container .message.recieved-message .message-content p {
   color: #fff;
